@@ -157,7 +157,7 @@ class EchoesGameExporter(GameExporter[EchoesGameExportParams]):
         if new_patcher is not None:
             opr_update = updaters.pop(0)
 
-            with monitoring.trace_block("open_prime_rando.echoes_patcher.patch_paks"):
+            with monitoring.trace_block("open_prime_rando.echoes.legacy_patcher.patch_paks"):
                 import open_prime_rando.echoes.legacy_patcher
 
                 open_prime_rando.echoes.legacy_patcher.patch_paks(
