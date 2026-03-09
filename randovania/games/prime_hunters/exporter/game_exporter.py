@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import dataclasses
+import os
 from pathlib import Path
 from typing import TYPE_CHECKING
 
@@ -47,4 +48,13 @@ class HuntersGameExporter(GameExporter[HuntersGameExportParams]):
         progress_update: status_update_lib.ProgressUpdateCallable,
         randovania_meta: PatcherDataMeta,
     ) -> None:
-        raise NotImplementedError("This method hasn't been implemented yet")
+
+        from open_prime_hunters_rando import prime_hunters_patcher
+
+        prime_hunters_patcher.validate(patch_data)
+        prime_hunters_patcher.patch_rom(
+            os.fspath(export_params.input_path),
+            os.fspath(export_params.output_path),
+            patch_data,
+            progress_update,
+        )
