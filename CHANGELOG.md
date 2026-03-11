@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [10.6.0] - 2026-04-??
 
+- Fixed: The resolver now correctly handles damage requirements with item alternatives.
+
 ### Metroid Dread
 
 #### Logic Database

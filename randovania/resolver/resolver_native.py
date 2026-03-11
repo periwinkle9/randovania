@@ -195,6 +195,9 @@ def _add_to_requirements_excluding_leaving_by_node(
     )
 
 
+INF: cython.float = float("inf")
+
+
 def resolver_reach_process_nodes(
     logic: Logic,
     initial_state: State,
@@ -274,6 +277,10 @@ def resolver_reach_process_nodes(
             target_node_index: cython.int = connection.target
             requirement: GraphRequirementSet = connection.requirement
 
+            # If we already have worse health going to target_node than the last time we got there, following this
+            # new connection will never be better
+            # TODO: checking with the damage of this route would be more accurate, but be more expensive as we need
+            # to calculate the damage every time. Maybe it's fine, maybe redoing this check after is better?
             if use_energy_fast_path:
                 if cython.compiled:
                     if not _energy_is_damage_state_strictly_better(damage_health, target_node_index, state_ptr):
@@ -288,18 +295,19 @@ def resolver_reach_process_nodes(
             satisfied: cython.bint = can_leave_node
 
             if satisfied:
-                # Check if the normal requirements to reach that node is satisfied
-                satisfied = requirement.satisfied(resources, damage_health)
-                if satisfied:
-                    # If it is, check if we additional requirements figured out by backtracking is satisfied
-                    additional_list: GraphRequirementSet = additional_requirements_list[node_index]
-                    satisfied = additional_list.satisfied(resources, damage_health)
+                # If it is, check if we additional requirements figured out by backtracking is satisfied
+                additional_list: GraphRequirementSet = additional_requirements_list[node_index]
+                satisfied = additional_list.satisfied(resources, damage_health)
 
+            damage: cython.float = INF
             if satisfied:
+                # Check if the normal requirements to reach that node is satisfied
+                damage = requirement.satisfied_damage(resources)
+
+            if damage <= damage_health:
                 if state.game_states_to_check[target_node_index] < 0:
                     state.nodes_to_check.push_back(target_node_index)
 
-                damage: cython.float = requirement.damage(resources)
                 if damage <= 0:
                     state.game_states_to_check[target_node_index] = damage_health_int
                 elif use_energy_fast_path:
