@@ -183,7 +183,7 @@ def test_create_spawn_point_field(echoes_game_description, echoes_pickup_databas
 
 
 def test_create_elevators_field_no_elevator(empty_patches, echoes_game_description):
-    with pytest.raises(InvalidConfiguration, match="Invalid elevator count. Expected 22, got 0."):
+    with pytest.raises(InvalidConfiguration, match=r"Invalid elevator count. Expected 22, got 0."):
         patch_data_factory._create_elevators_field(
             empty_patches, echoes_game_description, echoes_game_description.dock_weakness_database.find_type("elevator")
         )

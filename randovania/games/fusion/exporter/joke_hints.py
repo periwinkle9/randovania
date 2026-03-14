@@ -2,7 +2,8 @@ from __future__ import annotations
 
 from randovania.exporter.hints.joke_hints import GENERIC_JOKE_HINTS
 
-FUSION_JOKE_HINTS = GENERIC_JOKE_HINTS + [
+FUSION_JOKE_HINTS = [
+    *GENERIC_JOKE_HINTS,
     "Space Pirates, strangely, dislike theft.",
     "We've been trying to contact you about your ship's extended warranty.",
     "Did you know Yellow X are lemon flavoured?",

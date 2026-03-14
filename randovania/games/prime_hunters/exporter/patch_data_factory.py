@@ -227,7 +227,7 @@ class HuntersPatchDataFactory(PatchDataFactory[HuntersConfiguration, HuntersCosm
             )
 
             dud_hint = "this lore scan did not provide any useful OCTOLITH hints."
-            useless_hints = [self.rng.choice(GENERIC_JOKE_HINTS + [dud_hint])]
+            useless_hints = [self.rng.choice([*GENERIC_JOKE_HINTS, dud_hint])]
 
             if octoliths_precision != SpecificPickupHintMode.DISABLED:
                 if scan_text == "":

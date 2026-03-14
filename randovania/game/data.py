@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import dataclasses
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
@@ -77,7 +78,7 @@ class GameData:
     multiple_start_nodes_per_area: bool = False
     """If this game allows multiple start nodes per area."""
 
-    web_info: GameWebInfo = GameWebInfo()
+    web_info: GameWebInfo = dataclasses.field(default_factory=GameWebInfo)
     """Contains a handful of fields displayed primarily on the website."""
 
     racetime_url: str | None = None

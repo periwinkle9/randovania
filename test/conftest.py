@@ -654,7 +654,7 @@ else:
     @pytest.fixture
     def skip_qtbot(request: pytest.FixtureRequest) -> QtBot:
         pytest.skip()
-        return "no qtbot"  # noqa
+        return "no qtbot"
 
     @pytest.fixture(scope="session")
     def qapp_cls(request: pytest.FixtureRequest) -> None:

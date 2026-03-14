@@ -5,7 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [10.5.0] - 2026-03-??
+## [10.6.0] - 2026-04-??
+
+### Metroid Dread
+
+#### Logic Database
+
+##### Burenia
+
+- Added: Underneath Drogyga: Cross the grapple blocks with a horizontal bomb jump (Expert Diagonal Bomb Jump)
+- Added: Underneath Drogyga: Climb out of the water after drogyga using single-wall wall jump with a water bomb jump
+
+### Metroid Prime
+
+- Fixed: Metroid Prime Lair: Black screen softlock if Subchamber Five cutscene is skipped late
+- Fixed: Burn Dome: Wasps remain active if Incinerator Drone death cutscene is skipped on first frame
+- Fixed: [PAL] Frost Cave: Game stutter when loading Hunter Metroid layer
+
+## [10.5.0] - 2026-03-02
 
 - Changed: Removed game-specific text from the preset editor's header to make information more clear for all games in RDV.
 
@@ -16,7 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added: The current improvements gained to Speed Booster and Flash Shift from the "Upgrade" items (if present) will be displayed in the "Samus" menu.
   - The current "number of chained Flash Shifts" is displayed when Flash Shift Upgrades are present in the item pool, and either Flash Shift or at least one Flash Shift Upgrade has been obtained.
   - The current "time-to-charge Speed Booster" is displayed when Speed Booster Upgrades are present in the item pool, and either Speed Booster or at least one Speed Booster Upgrade has been obtained.
-- Added: Icons for individual Beam and Missile upgrades are displayed in the header of the each respective category in the "Samus" menu, clearly indicating whether or not "earlier" items have been obtained even if a "later" item was obatined first.
+- Added: Icons for individual Beam and Missile upgrades are displayed in the header of each respective category in the "Samus" menu, clearly indicating whether or not "earlier" items have been obtained even if a "later" item was obtained first.
   - For example, if the player has obtained Plasma Beam, an icon will be displayed on the Beams category for Wide Beam. The icon will be "dimmed" if the player has not yet obtained Wide Beam, and it will light up once Wide Beam is acquired.
   - Likewise, if the player has obtained Wave Beam, an icon with similar behavior is displayed for Plasma Beam.
   - Likewise, if the player has obtained Ice Missiles, an icon with similar behavior is displayed for Super Missiles.
@@ -29,11 +46,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added: Door Lock Overrides:
     - The Shutter Gate in Main Hub Tower Top leading to Flash Shift Room is now additionally logical with Speed Booster.
-    - The Shutter Gate in Flash Shift Room is now additionally logical with Flash Shift Skip (Beginner) and
-      either Wall Jump (Beginner) or using Spin Boost.
-    - The Shutter Gate in Main Hub Tower Top leading to Underwater Horseshoe is now additionally logical with Speed
-      Booster and either Speed Booster Conservation (Intermediate) or Speed Booster Conservation (Beginner) and Gravity
-      Suit.
+    - The Shutter Gate in Flash Shift Room is now additionally logical with Flash Shift Skip (Beginner) and either Wall Jump (Beginner) or using Spin Boost.
+    - The Shutter Gate in Main Hub Tower Top leading to Underwater Horseshoe is now additionally logical with Speed Booster and either Speed Booster Conservation (Intermediate) or Speed Booster Conservation (Beginner) and Gravity Suit.
 
 ##### Cataris
 
@@ -44,13 +58,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ##### Ferenia
 
 - Added: Door Lock Override:
-    - The Shutter Gate in Total Recharge Station is now additionally logical with Flash Shift Skip (Beginner) and either
-      Movement (Beginner) or using Spin Boost.
+    - The Shutter Gate in Total Recharge Station is now additionally logical with Flash Shift Skip (Beginner) and either Movement (Beginner) or using Spin Boost.
 
-##### Haubia
+##### Hanubia
 
 - Fixed: Requirements for Power Bomb ammo in Ferenia Shortcut have been strengthened, so 2 ammo is required to reach the Pickup, 3 ammo is required to leave from the pickup, in either direction.
-- Fixed: Requirements for Power Bomb ammo in Sppedboost Puzzle Room have been strengthened, so 4 ammo is required to get from Ferenia Shortcut to the Navigation Station.
+- Fixed: Requirements for Power Bomb ammo in Speedboost Puzzle Room have been strengthened, so 4 ammo is required to get from Ferenia Shortcut to the Navigation Station.
 
 ### Metroid Fusion
 
@@ -87,7 +100,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
         - Elevator to Main Deck => Sector 3 (PYR) Entrance Elevator
         - Glass Tube to Sector 5 (ARC) => Sector 3 (PYR) Westbound Glass Tube
         - Glass Tube to Sector 1 (SRX) => Sector 3 (PYR) Eastbound Glass Tube
-    - Sector 4 (AQA:
+    - Sector 4 (AQA):
         - Elevator to Main Deck => Sector 4 (AQA) Entrance Elevator
         - Cargo Hold to Sector 5 (ARC) => Cargo Hold
         - Glass Tube to Sector 6 (NOC) => Sector 4 (AQA) Eastbound Glass Tube

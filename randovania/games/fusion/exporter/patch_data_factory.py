@@ -33,7 +33,7 @@ if TYPE_CHECKING:
 class FusionPatchDataFactory(PatchDataFactory[FusionConfiguration, FusionCosmeticPatches]):
     _placeholder_metroid_message = "placeholder metroid text"
     _metroid_message_id = 56
-    _lang_list = ["JapaneseKanji", "JapaneseHiragana", "English", "German", "French", "Italian", "Spanish"]
+    _lang_list = ("JapaneseKanji", "JapaneseHiragana", "English", "German", "French", "Italian", "Spanish")
     _easter_egg_bob = 64
     _easter_egg_shiny = 1024
 

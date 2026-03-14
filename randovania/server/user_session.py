@@ -75,7 +75,7 @@ def _create_user_from_discord(discord_user: DiscordUser) -> User:
     if discord_name is None:
         discord_name = discord_user.username
 
-    user, created = User.get_or_create(discord_id=int(discord_user.id), defaults={"name": discord_name})
+    user, _created = User.get_or_create(discord_id=int(discord_user.id), defaults={"name": discord_name})
 
     if user.name != discord_name:
         user.name = discord_name

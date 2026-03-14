@@ -56,7 +56,7 @@ def main() -> None:
 
         if args.git_add:
             subprocess.check_call(
-                ["git", "add"] + new_paths,
+                ["git", "add", *new_paths],
             )
     except subprocess.CalledProcessError as e:
         print("!! An error has occurred!")

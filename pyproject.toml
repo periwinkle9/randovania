@@ -90,7 +90,7 @@ exporters = [
     "planets-yapr==1.0.1",
 
     # Metroid Prime 1
-    "py_randomprime==1.30.3",
+    "py_randomprime==1.30.4",
     "random-enemy-attributes==1.0.4.3",
 
     # Metroid Prime 1/2
@@ -106,7 +106,7 @@ exporters = [
 ]
 
 gui = [
-    "PySide6-Essentials==6.10.0",
+    "PySide6-Essentials==6.10.2",
     "pyqtdarktheme-fork>=2.3.0",
     "markdown",
     "qasync",
@@ -239,6 +239,7 @@ extend-select = [
     "PIE", # flake8-pie (misc checks)
     "PT", # common style issues or inconsistencies with pytest-based tests (flake8-pytest-style)
     "SIM101", # Multiple isinstance calls for {name}, merge into a single call
+    "RUF",  # Ruff-specific rules
 
     "PLC",  # pylint convention
     "PLC0208",  # iterating over set is also not deterministic, so we shouldn't do that!

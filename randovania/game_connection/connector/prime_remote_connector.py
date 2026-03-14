@@ -247,7 +247,7 @@ class PrimeRemoteConnector(RemoteConnector):
             return False
 
         # Send the pickup, increase magic item capacity by one, show message and set a cooldown.
-        provider_name, pickup, coop_location = remote_pickups[magic_inv.capacity]
+        provider_name, pickup, _coop_location = remote_pickups[magic_inv.capacity]
         item_patches, message = await self._patches_for_pickup(provider_name, pickup, inventory)
         self.logger.info(f"{len(remote_pickups)} permanent pickups, magic {magic_inv.capacity}. Next pickup: {message}")
 

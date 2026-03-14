@@ -820,7 +820,7 @@ class EchoesPatchDataFactory(PatchDataFactory[EchoesConfiguration, EchoesCosmeti
         ]
         for node, connection in all_teleporters:
             node_identifier = connection.identifier
-            area_patches, area = self._add_area_to_regions_patch(regions_patch_data, node)
+            area_patches, _area = self._add_area_to_regions_patch(regions_patch_data, node)
             area_patches["elevators"].append(
                 {
                     "instance_id": node.extra["teleporter_instance_id"],
@@ -857,7 +857,7 @@ class EchoesPatchDataFactory(PatchDataFactory[EchoesConfiguration, EchoesCosmeti
         }
 
     def add_credits_skip(self, regions_patch_data: dict) -> None:
-        area_data, area = self._add_area_to_regions_patch(
+        area_data, _area = self._add_area_to_regions_patch(
             regions_patch_data, AreaIdentifier("Temple Grounds", "Sky Temple Gateway")
         )
         area_data["docks"]["Cinema_Dock"] = {

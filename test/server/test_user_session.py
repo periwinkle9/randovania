@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING
 from unittest.mock import ANY, AsyncMock, MagicMock
 
 import pytest
-from fastapi import Request  # noqa: TC002
+from fastapi import Request
 from fastapi.responses import RedirectResponse
 
 from randovania.network_common import error
@@ -14,7 +14,7 @@ from randovania.network_common.error import InvalidSessionError
 from randovania.server import user_session
 from randovania.server.database import User
 from randovania.server.fastapi_discord import exceptions as fd_exceptions
-from randovania.server.server_app import ServerAppDep  # noqa: TC001
+from randovania.server.server_app import ServerAppDep
 
 if TYPE_CHECKING:
     import pytest_mock
