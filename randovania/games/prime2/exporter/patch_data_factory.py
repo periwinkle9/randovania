@@ -889,16 +889,13 @@ class EchoesPatchDataFactory(PatchDataFactory[EchoesConfiguration, EchoesCosmeti
         #     self.add_credits_skip(regions_patch_data)
 
         return {
-            "legacy_compatibility": True,
             "worlds": regions_patch_data,
-            "area_patches": {"rebalance_world": True},
             "small_randomizations": {
                 "seed": self.description.get_seed_for_world(self.players_config.player_index),
                 "echo_locks": True,
                 "minigyro_chamber": True,
                 "rubiks": True,
             },
-            "inverted": self.configuration.inverted_mode,
             "cosmetics": self.add_new_patcher_cosmetics(),
         }
 

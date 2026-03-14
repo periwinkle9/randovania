@@ -1792,17 +1792,29 @@ wheels = [
 
 [[package]]
 name = "open-prime-rando"
-version = "0.15.1"
+version = "0.16.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jsonschema" },
+    { name = "open-prime-rando-practice-mod" },
     { name = "ppc-asm" },
     { name = "py-randomprime" },
+    { name = "pydantic" },
+    { name = "pyelftools" },
     { name = "retro-data-structures" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/10/0c/183e17d5bad171b0eada63b0ceaa21bf5bba771cb76b95107e7aeec06aa2/open_prime_rando-0.15.1.tar.gz", hash = "sha256:eeb5f95dba1eff9bda56da64c09ba4dc39fd5a3c7d315307b1ea5d278e5509f1", size = 2896911, upload-time = "2024-10-26T18:58:55.648Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/0d/57/6b9996eb4d00853170e24dd1ff4e4bde886558005135735c6e597fb88699/open_prime_rando-0.16.0.tar.gz", hash = "sha256:91f18651f173957ae8500f3e1174df6732c1151946067353edff71e0e390bbe9", size = 2938940, upload-time = "2026-03-08T19:34:10.974Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a2/44/f66bea53d8e2b94749de3fb68053fd35415260accc34bbfc3a67d8d154eb/open_prime_rando-0.15.1-py3-none-any.whl", hash = "sha256:eb94bb1a4398d1cd79462c99e95cacb184521a75c0150181b8be4459e21e21c9", size = 2952925, upload-time = "2024-10-26T18:58:53.657Z" },
+    { url = "https://files.pythonhosted.org/packages/8f/48/7e43f0e008bf1e18eaf312a7938f10ef695b082030cfa40748bada1e1dd8/open_prime_rando-0.16.0-py3-none-any.whl", hash = "sha256:6271b55e5acbcde308dde10a78122e7179ec7307e15775522548b40839b80c71", size = 2955870, upload-time = "2026-03-08T19:34:08.255Z" },
+]
+
+[[package]]
+name = "open-prime-rando-practice-mod"
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/83/6e/fbd7467559e8744495e0ccdf40b21c30db9eebe49c2e4dd9c5bf2453be21/open_prime_rando_practice_mod-0.1.0.tar.gz", hash = "sha256:18bad535449d0839f88090c0a8547ae5e77d064e19e80f0bdd784d5ce3f8b598", size = 170535, upload-time = "2026-02-12T22:34:41.847Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/91/d3/2832b63cf4f18c4f796ca086e137446a056a2079a85c5a71c349f7a3b047/open_prime_rando_practice_mod-0.1.0-py3-none-any.whl", hash = "sha256:8044695bc16ddef000680408954c51198c44bbfdccb7e56989e87989376c2abd", size = 172606, upload-time = "2026-02-12T22:34:39.678Z" },
 ]
 
 [[package]]
@@ -2268,6 +2280,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/aa/81/05e400037eaf55ad400bcd318c05bb345b57e708887f07ddb2d20e3f0e98/pydantic_core-2.41.5-graalpy312-graalpy250_312_native-macosx_11_0_arm64.whl", hash = "sha256:aabf5777b5c8ca26f7824cb4a120a740c9588ed58df9b2d196ce92fba42ff8dc", size = 1915388, upload-time = "2025-11-04T13:42:52.215Z" },
     { url = "https://files.pythonhosted.org/packages/6e/0d/e3549b2399f71d56476b77dbf3cf8937cec5cd70536bdc0e374a421d0599/pydantic_core-2.41.5-graalpy312-graalpy250_312_native-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c007fe8a43d43b3969e8469004e9845944f1a80e6acd47c150856bb87f230c56", size = 1942879, upload-time = "2025-11-04T13:42:56.483Z" },
     { url = "https://files.pythonhosted.org/packages/f7/07/34573da085946b6a313d7c42f82f16e8920bfd730665de2d11c0c37a74b5/pydantic_core-2.41.5-graalpy312-graalpy250_312_native-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:76d0819de158cd855d1cbb8fcafdf6f5cf1eb8e470abe056d5d161106e38062b", size = 2139017, upload-time = "2025-11-04T13:42:59.471Z" },
+]
+
+[[package]]
+name = "pyelftools"
+version = "0.32"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b9/ab/33968940b2deb3d92f5b146bc6d4009a5f95d1d06c148ea2f9ee965071af/pyelftools-0.32.tar.gz", hash = "sha256:6de90ee7b8263e740c8715a925382d4099b354f29ac48ea40d840cf7aa14ace5", size = 15047199, upload-time = "2025-02-19T14:20:05.549Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/af/43/700932c4f0638c3421177144a2e86448c0d75dbaee2c7936bda3f9fd0878/pyelftools-0.32-py3-none-any.whl", hash = "sha256:013df952a006db5e138b1edf6d8a68ecc50630adbd0d83a2d41e7f846163d738", size = 188525, upload-time = "2025-02-19T14:19:59.919Z" },
 ]
 
 [[package]]
@@ -2859,7 +2880,7 @@ requires-dist = [
     { name = "nod", marker = "extra == 'gui'", specifier = ">=1.9" },
     { name = "oauthlib", marker = "extra == 'server'" },
     { name = "open-dread-rando", marker = "extra == 'exporters'", specifier = "==2.19.0" },
-    { name = "open-prime-rando", marker = "extra == 'exporters'", specifier = "==0.15.1" },
+    { name = "open-prime-rando", marker = "extra == 'exporters'", specifier = "==0.16.0" },
     { name = "open-samus-returns-rando", marker = "extra == 'exporters'", specifier = "==3.4.0" },
     { name = "packaging" },
     { name = "peewee", marker = "extra == 'server'" },
@@ -2888,7 +2909,7 @@ requires-dist = [
     { name = "qasync", marker = "extra == 'gui'" },
     { name = "qrcode", extras = ["pil"], marker = "extra == 'gui'", specifier = ">=8.0" },
     { name = "random-enemy-attributes", marker = "extra == 'exporters'", specifier = "==1.0.4.3" },
-    { name = "retro-data-structures", marker = "extra == 'exporters'", specifier = ">=0.24.0,<0.29" },
+    { name = "retro-data-structures", marker = "extra == 'exporters'", specifier = ">=0.33" },
     { name = "ruamel-yaml", marker = "extra == 'website'" },
     { name = "rustworkx", specifier = ">=0.17.1" },
     { name = "sentry-sdk" },
@@ -2947,17 +2968,19 @@ wheels = [
 
 [[package]]
 name = "retro-data-structures"
-version = "0.28.0"
+version = "0.33.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "construct" },
     { name = "lzokay" },
+    { name = "pillow" },
+    { name = "ppc-asm" },
     { name = "pycryptodome" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/1c/f0/ef02d5e08c39c7dcbbdbe0f3cbedf3cb530e80fab38dbd32ecd62e1b8fd0/retro_data_structures-0.28.0.tar.gz", hash = "sha256:7541862ef9e649d2ce0b99261f196e4f0c2e47668f7907e76d289d0ae6933bf3", size = 2708170, upload-time = "2024-10-11T22:39:41.31Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/12/e0/9a6ee593cf980d6cb3dd90cd35a7355805cda962bf5e540c0a1311a9d58a/retro_data_structures-0.33.0.tar.gz", hash = "sha256:b4a402ae74718834fabccd42f7f964910192999775f43b88777c0e257b16c8b4", size = 1952921, upload-time = "2025-10-29T20:43:42.913Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/85/eb/a61bb537ecff3a3faef5f8b22f0173da0685326d034cc1ae86c4bbce0e9a/retro_data_structures-0.28.0-py3-none-any.whl", hash = "sha256:b837a6e81765a48b188fdd505a9d4f6ae19877ffb415f0bb7029a61db53935e1", size = 5402194, upload-time = "2024-10-11T22:39:38.998Z" },
+    { url = "https://files.pythonhosted.org/packages/ff/ff/3efccde7ded445ff4f686c019bf2a8f8e453f1846f79e4e46e88841cba97/retro_data_structures-0.33.0-py3-none-any.whl", hash = "sha256:6af7e8a60e82e7194392645f5b277407b6ce9252f994d736f67ab53a63f7bfee", size = 4013665, upload-time = "2025-10-29T20:43:40.945Z" },
 ]
 
 [[package]]
