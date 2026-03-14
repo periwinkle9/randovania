@@ -16,6 +16,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added: Underneath Drogyga: Cross the grapple blocks with a horizontal bomb jump (Expert Diagonal Bomb Jump)
 - Added: Underneath Drogyga: Climb out of the water after drogyga using single-wall wall jump with a water bomb jump
 
+### Metroid Prime
+
+- Fixed: Metroid Prime Lair: Black screen softlock if Subchamber Five cutscene is skipped late
+- Fixed: Burn Dome: Wasps remain active if Incinerator Drone death cutscene is skipped on first frame
+- Fixed: [PAL] Frost Cave: Game stutter when loading Hunter Metroid layer
+
 ## [10.5.0] - 2026-03-02
 
 - Changed: Removed game-specific text from the preset editor's header to make information more clear for all games in RDV.
