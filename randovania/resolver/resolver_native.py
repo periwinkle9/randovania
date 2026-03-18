@@ -198,7 +198,8 @@ def _add_to_requirements_excluding_leaving_by_node(
 INF: cython.float = float("inf")
 
 
-def resolver_reach_process_nodes(
+# FIXME: figure out a way to not disable the complexity requirement
+def resolver_reach_process_nodes(  # noqa: C901
     logic: Logic,
     initial_state: State,
     output: ProcessNodesResponse,
@@ -305,18 +306,30 @@ def resolver_reach_process_nodes(
                 damage = requirement.satisfied_damage(resources)
 
             if damage <= damage_health:
-                if state.game_states_to_check[target_node_index] < 0:
-                    state.nodes_to_check.push_back(target_node_index)
+                add_to_nodes_to_check: cython.bint = state.game_states_to_check[target_node_index] < 0
 
                 if damage <= 0:
+                    # path deals no damage. damage check from above is still valid
                     state.game_states_to_check[target_node_index] = damage_health_int
                 elif use_energy_fast_path:
                     damage_int: cython.int = int(damage)
-                    state.game_states_to_check[target_node_index] = max(damage_health_int - damage_int, 0)
+                    new_health: cython.int = max(damage_health_int - damage_int, 0)
+
+                    # path dealt damage
+                    # is the new health as good or worse as the last time we found this?
+                    # then forget about this path
+                    if new_health <= state.checked_nodes[target_node_index]:
+                        continue
+
+                    state.game_states_to_check[target_node_index] = new_health
                 else:
-                    state.game_states_to_check[target_node_index] = current_game_state.apply_damage(
-                        damage
-                    ).health_for_damage_requirements()
+                    new_state = current_game_state.apply_damage(damage)
+                    if not new_state.is_better_than(state.checked_nodes[target_node_index]):
+                        continue
+                    state.game_states_to_check[target_node_index] = new_state.health_for_damage_requirements()
+
+                if add_to_nodes_to_check:
+                    state.nodes_to_check.push_back(target_node_index)
 
                 if node_heal:
                     state.satisfied_requirement_on_node[target_node_index].first.set(requirement)
