@@ -18,6 +18,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added: Underneath Drogyga: Cross the grapple blocks with a horizontal bomb jump (Expert Diagonal Bomb Jump)
 - Added: Underneath Drogyga: Climb out of the water after drogyga using single-wall wall jump with a water bomb jump
 
+### Metroid Fusion
+
+#### Logic Database
+
+- Changed: Blue-X Damage has been separated from Cold Damage.
+
+##### Sector 6 (NOC)
+
+- Fixed: Nocturnal Shaft: When going from top right to top left, damage boosting through the Blue-X now correctly expects at least 70 health.
+
 ### Metroid Prime
 
 - Fixed: Metroid Prime Lair: Black screen softlock if Subchamber Five cutscene is skipped late
