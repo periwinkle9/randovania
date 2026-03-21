@@ -318,13 +318,17 @@ def resolver_reach_process_nodes(  # noqa: C901
                     # path dealt damage
                     # is the new health as good or worse as the last time we found this?
                     # then forget about this path
-                    if new_health <= state.checked_nodes[target_node_index]:
-                        continue
+                    if cython.compiled:
+                        if not _energy_is_damage_state_strictly_better(new_health, target_node_index, state_ptr):
+                            continue
+                    else:
+                        if not _pure_energy_is_damage_state_strictly_better(new_health, target_node_index, state):
+                            continue
 
                     state.game_states_to_check[target_node_index] = new_health
                 else:
                     new_state = current_game_state.apply_damage(damage)
-                    if not new_state.is_better_than(state.checked_nodes[target_node_index]):
+                    if not _generic_is_damage_state_strictly_better(new_state, target_node_index, state_ptr):
                         continue
                     state.game_states_to_check[target_node_index] = new_state.health_for_damage_requirements()
 
