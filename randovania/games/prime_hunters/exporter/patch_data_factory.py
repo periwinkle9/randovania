@@ -255,6 +255,9 @@ class HuntersPatchDataFactory(PatchDataFactory[HuntersConfiguration, HuntersCosm
             "configuration_id": self.description.get_seed_for_world(self.players_config.player_index),
             "starting_items": starting_items,
             "areas": self._entity_patching_per_area(),
+            "game_patches": {
+                "shuffle_hunter_colors": self.cosmetic_patches.shuffle_hunter_colors,
+            },
             "string_tables": self._update_string_tables(),
         }
 
