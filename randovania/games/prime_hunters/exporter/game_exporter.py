@@ -50,6 +50,12 @@ class HuntersGameExporter(GameExporter[HuntersGameExportParams]):
     ) -> None:
 
         from open_prime_hunters_rando import prime_hunters_patcher
+        from open_prime_hunters_rando.version import version as open_prime_hunters_rando_version
+
+        text_patches = patch_data["text_patches"]
+        text_patches["patcher_version"] = text_patches["patcher_version"].replace(
+            "<version>", f"{open_prime_hunters_rando_version}"
+        )
 
         prime_hunters_patcher.validate(patch_data)
         prime_hunters_patcher.patch_rom(

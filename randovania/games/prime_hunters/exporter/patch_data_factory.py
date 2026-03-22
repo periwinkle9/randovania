@@ -259,6 +259,9 @@ class HuntersPatchDataFactory(PatchDataFactory[HuntersConfiguration, HuntersCosm
                 "shuffle_hunter_colors": self.cosmetic_patches.shuffle_hunter_colors,
             },
             "string_tables": self._update_string_tables(),
+            "text_patches": {
+                "patcher_version": "<version>",
+            },
         }
 
     @override
