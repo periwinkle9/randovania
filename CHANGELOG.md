@@ -23,6 +23,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Logic Database
 
 - Changed: Blue-X Damage has been separated from Cold Damage.
+- Changed: Acid Damage has been separated from Normal Damage.
+
+##### Sector 1 (SRX)
+
+- Update Ripper Sauna to use Acid Damage.
 
 ##### Sector 6 (NOC)
 
