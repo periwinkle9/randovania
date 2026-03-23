@@ -791,6 +791,10 @@
             "BlueXDamage": {
                 "long_name": "Blue-X Damage",
                 "extra": {}
+            },
+            "AcidDamage": {
+                "long_name": "Acid Damage",
+                "extra": {}
             }
         },
         "versions": {},
