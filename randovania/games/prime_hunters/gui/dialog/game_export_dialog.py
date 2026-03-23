@@ -75,7 +75,7 @@ class HuntersGameExportDialog(GameExportDialog[HuntersConfiguration], Ui_Hunters
     ):
         super().__init__(options, configuration, word_hash, spoiler, games)
 
-        self._base_output_name = f"Hunters - {word_hash}.{self.valid_file_type}"
+        self._base_output_name = f"Prime Hunters - {word_hash}.{self.valid_file_type}"
         hunters_options = options.per_game_options(HuntersPerGameOptions)
 
         # Input
@@ -145,6 +145,6 @@ class HuntersGameExportDialog(GameExportDialog[HuntersConfiguration], Ui_Hunters
 
         return HuntersGameExportParams(
             spoiler_output=spoiler_output,
-            input_path=self.input_file,
-            output_path=self.output_file,
+            input_file=self.input_file,
+            output_file=self.output_file,
         )

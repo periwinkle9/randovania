@@ -1,21 +1,23 @@
 from __future__ import annotations
 
 import dataclasses
-import os
+from collections.abc import Callable
 from pathlib import Path
 from typing import TYPE_CHECKING
 
+from randovania import monitoring
 from randovania.exporter.game_exporter import GameExporter, GameExportParams
+from randovania.lib import status_update_lib
 
 if TYPE_CHECKING:
     from randovania.exporter.patch_data_factory import PatcherDataMeta
-    from randovania.lib import status_update_lib
 
 
 @dataclasses.dataclass(frozen=True)
 class HuntersGameExportParams(GameExportParams):
-    input_path: Path
+    input_file: Path
     output_path: Path
+    post_export: Callable[[status_update_lib.ProgressUpdateCallable], None] | None
 
 
 class HuntersGameExporter(GameExporter[HuntersGameExportParams]):
@@ -49,7 +51,6 @@ class HuntersGameExporter(GameExporter[HuntersGameExportParams]):
         randovania_meta: PatcherDataMeta,
     ) -> None:
 
-        from open_prime_hunters_rando import prime_hunters_patcher
         from open_prime_hunters_rando.version import version as open_prime_hunters_rando_version
 
         text_patches = patch_data["text_patches"]
@@ -57,10 +58,21 @@ class HuntersGameExporter(GameExporter[HuntersGameExportParams]):
             "<version>", f"{open_prime_hunters_rando_version}"
         )
 
-        prime_hunters_patcher.validate(patch_data)
-        prime_hunters_patcher.patch_rom(
-            os.fspath(export_params.input_path),
-            os.fspath(export_params.output_path),
-            patch_data,
-            progress_update,
-        )
+        patcher_update: status_update_lib.ProgressUpdateCallable
+        if export_params.post_export is not None:
+            patcher_update = status_update_lib.OffsetProgressUpdate(progress_update, 0, 0.75)
+        else:
+            patcher_update = progress_update
+
+        with monitoring.trace_block("open_prime_hunters_rando.patch_with_status_update"):
+            import open_prime_hunters_rando
+
+            open_prime_hunters_rando.patch_with_status_update(
+                export_params.input_file,
+                export_params.output_path,
+                patch_data,
+                lambda progress, msg: patcher_update(msg, progress),
+            )
+
+        if export_params.post_export is not None:
+            export_params.post_export(status_update_lib.OffsetProgressUpdate(progress_update, 0.75, 0.25))
