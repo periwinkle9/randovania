@@ -40,7 +40,9 @@ Extra - entity_file: Unit3_b1_Ent.bin
   > Door to Stronghold Void A (VDO)
       After VDO - Defeat Cretaphid v2
   > Event - Cretaphid v2
-      Trivial
+      Any of the following:
+          Combat (Intermediate) or Damage ≥ 199
+          Combat (Beginner) and Damage ≥ 99
 
 ----------------
 Biodefense Chamber B (VDO)
@@ -79,7 +81,11 @@ Extra - entity_file: Unit3_b2_Ent.bin
   > Door to Stronghold Void B (VDO)
       After VDO - Defeat Slench 4
   > Event - Slench 4
-      Magmaul
+      All of the following:
+          Magmaul
+          Any of the following:
+              Combat (Expert) or Damage ≥ 399
+              Combat (Advanced) and Damage ≥ 299
 
 ----------------
 Bioweaponry Lab
@@ -281,7 +287,7 @@ VDO Gateway
 Extra - room_id: 65
 Extra - entity_file: unit3_Land_Ent.bin
 Extra - portal_filename: unit3_Land_Ent
-> Ship; Heals? False; Default Node
+> Ship; Heals? True; Default Node
   * Layers: default
   * Teleporter Network (Unlocked by Trivial)
   * Extra - entity_id: 0
