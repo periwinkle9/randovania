@@ -798,7 +798,7 @@ wheels = [
 
 [[package]]
 name = "fastapi"
-version = "0.135.1"
+version = "0.135.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "annotated-doc" },
@@ -807,9 +807,9 @@ dependencies = [
     { name = "typing-extensions" },
     { name = "typing-inspection" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/e7/7b/f8e0211e9380f7195ba3f3d40c292594fd81ba8ec4629e3854c353aaca45/fastapi-0.135.1.tar.gz", hash = "sha256:d04115b508d936d254cea545b7312ecaa58a7b3a0f84952535b4c9afae7668cd", size = 394962, upload-time = "2026-03-01T18:18:29.369Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/c4/73/5903c4b13beae98618d64eb9870c3fac4f605523dd0312ca5c80dadbd5b9/fastapi-0.135.2.tar.gz", hash = "sha256:88a832095359755527b7f63bb4c6bc9edb8329a026189eed83d6c1afcf419d56", size = 395833, upload-time = "2026-03-23T14:12:41.697Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e4/72/42e900510195b23a56bde950d26a51f8b723846bfcaa0286e90287f0422b/fastapi-0.135.1-py3-none-any.whl", hash = "sha256:46e2fc5745924b7c840f71ddd277382af29ce1cdb7d5eab5bf697e3fb9999c9e", size = 116999, upload-time = "2026-03-01T18:18:30.831Z" },
+    { url = "https://files.pythonhosted.org/packages/8f/ea/18f6d0457f9efb2fc6fa594857f92810cadb03024975726db6546b3d6fcf/fastapi-0.135.2-py3-none-any.whl", hash = "sha256:0af0447d541867e8db2a6a25c23a8c4bd80e2394ac5529bd87501bbb9e240ca5", size = 117407, upload-time = "2026-03-23T14:12:43.284Z" },
 ]
 
 [[package]]
@@ -2475,16 +2475,16 @@ wheels = [
 
 [[package]]
 name = "pytest-cov"
-version = "7.0.0"
+version = "7.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "coverage" },
     { name = "pluggy" },
     { name = "pytest" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/5e/f7/c933acc76f5208b3b00089573cf6a2bc26dc80a8aece8f52bb7d6b1855ca/pytest_cov-7.0.0.tar.gz", hash = "sha256:33c97eda2e049a0c5298e91f519302a1334c26ac65c1a483d6206fd458361af1", size = 54328, upload-time = "2025-09-09T10:57:02.113Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b1/51/a849f96e117386044471c8ec2bd6cfebacda285da9525c9106aeb28da671/pytest_cov-7.1.0.tar.gz", hash = "sha256:30674f2b5f6351aa09702a9c8c364f6a01c27aae0c1366ae8016160d1efc56b2", size = 55592, upload-time = "2026-03-21T20:11:16.284Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ee/49/1377b49de7d0c1ce41292161ea0f721913fa8722c19fb9c1e3aa0367eecb/pytest_cov-7.0.0-py3-none-any.whl", hash = "sha256:3b8e9558b16cc1479da72058bdecf8073661c7f57f7d3c5f22a1c23507f2d861", size = 22424, upload-time = "2025-09-09T10:57:00.695Z" },
+    { url = "https://files.pythonhosted.org/packages/9d/7a/d968e294073affff457b041c2be9868a40c1c71f4a35fcc1e45e5493067b/pytest_cov-7.1.0-py3-none-any.whl", hash = "sha256:a0461110b7865f9a271aa1b51e516c9a95de9d696734a2f71e3e78f46e1d4678", size = 22876, upload-time = "2026-03-21T20:11:14.438Z" },
 ]
 
 [[package]]
@@ -2954,16 +2954,27 @@ typing = [
 
 [[package]]
 name = "randovania-lupa"
-version = "2.0.2"
+version = "2.0.4"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/ed/35/b7890203c0b9888a48afc36844e0ffec20179665f716cc6c5ad035063cfb/randovania-lupa-2.0.2.tar.gz", hash = "sha256:7d776fedad890accf9a192f6efe1b6d3f3a875e509aef50cb10954e9422c740c", size = 1572077, upload-time = "2025-01-03T18:00:38.906Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/db/58/4e1d69a2984d1c7ddb7df7acbed3840b779e2857181da7cc20780e90067a/randovania_lupa-2.0.4.tar.gz", hash = "sha256:63b6acec94aeff7a12b28ab7da2707bb90a29e89f5a674568050b1f641224f01", size = 1651859, upload-time = "2026-03-22T23:59:26.39Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/3a/8a/4d7e975c949ca937a39e6aa5def67d68c5f95ae0f5dd3604c1431b0bfb02/randovania_lupa-2.0.2-cp312-cp312-macosx_11_0_universal2.whl", hash = "sha256:93e397cf466225ddcf93224c9ae66dfd651c85a8fe624e4d48bb40ae1af3bcac", size = 1320561, upload-time = "2025-01-03T18:00:19.605Z" },
-    { url = "https://files.pythonhosted.org/packages/e5/8a/d4a8db4e6469782a36138a604bba9a13d8de3077d78605aa4aa65c65509b/randovania_lupa-2.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:3f8f182b7bf8c51bd82d8f25045e6a6cf95cf11963a5403c7dd8d1ba179221f4", size = 826378, upload-time = "2025-01-03T18:00:22.03Z" },
-    { url = "https://files.pythonhosted.org/packages/ef/1f/eeb1bc284b43b8d0cf558b9e3261b8a25d0e5ea1035f28133d0a7a8bbd8e/randovania_lupa-2.0.2-cp312-cp312-win_amd64.whl", hash = "sha256:782c83093532af2bfa0ac1cd99feb604542316c5d586e8d833d12539404a40ee", size = 680148, upload-time = "2025-01-03T18:00:26.883Z" },
-    { url = "https://files.pythonhosted.org/packages/e7/b7/f3ac753e74fd99023635e96379b4bb2f9fa9a31df6412fb40866357c36e9/randovania_lupa-2.0.2-cp313-cp313-macosx_11_0_universal2.whl", hash = "sha256:79f64b2c9fd497f55935e7ff0d66ca9228ed7e2fc19f74353d9038f8d7bc8257", size = 1317520, upload-time = "2025-01-03T18:00:30.237Z" },
-    { url = "https://files.pythonhosted.org/packages/6e/77/8c09d139784950aa5970a75e17051fc5941fbfc0d097d67c3563f4cfd8e5/randovania_lupa-2.0.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:995d0e1e2eedd9c399c552c72aa3e023fbd15ab75557fb555870110288010cbb", size = 828162, upload-time = "2025-01-03T18:00:33.447Z" },
-    { url = "https://files.pythonhosted.org/packages/cd/a7/4f86317d914e8f62bcde66048bb99416725548a2812c209bef9b2147ab34/randovania_lupa-2.0.2-cp313-cp313-win_amd64.whl", hash = "sha256:970c9f7ab965497be58fea38ffc0a9aaaf47a84d662becb8b7c25891bac47b71", size = 676999, upload-time = "2025-01-03T18:00:35.612Z" },
+    { url = "https://files.pythonhosted.org/packages/a9/6e/c84ebc7bbfed7b1b6e55f1cd12bbe4964b869a064981d8619bfa9b91cd17/randovania_lupa-2.0.4-cp312-cp312-macosx_11_0_universal2.whl", hash = "sha256:890c6927ea39e0a56e1362ac406a8aebb9f51c10559728c7e12a44e5250614d6", size = 1323676, upload-time = "2026-03-22T23:58:46.954Z" },
+    { url = "https://files.pythonhosted.org/packages/d9/77/8cabfc7bde21caca6fbaab13cb9a6df8c2055881c746056d148faad1e27a/randovania_lupa-2.0.4-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:43835be8fd7548cd6898ffe5085d038fece7dcb7861da0c9b7c2749108e8cdd8", size = 711370, upload-time = "2026-03-22T23:58:48.761Z" },
+    { url = "https://files.pythonhosted.org/packages/e0/62/50341e5ef2fbc12709071d8abc455e12341700ca4b580386907c8ebe2c16/randovania_lupa-2.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:afabbc43f62f8fbf7a6fffc2a1be3f09fe94aaa34442ecace05441412911d11c", size = 756189, upload-time = "2026-03-22T23:58:50.917Z" },
+    { url = "https://files.pythonhosted.org/packages/ba/5e/e47c69a06624efc0202f2088bc17885d23c018f078d48763bcf7e9499466/randovania_lupa-2.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:3fd109d343126ae96478676cd491256156b305cd4956d3dd2e6160eb0391e290", size = 795964, upload-time = "2026-03-22T23:58:52.982Z" },
+    { url = "https://files.pythonhosted.org/packages/95/ea/99a1870ba50b2bd9a6072a63e239040d0e189707a93654b99e2551fb7749/randovania_lupa-2.0.4-cp312-cp312-win_amd64.whl", hash = "sha256:f35aecc845cad084bdf7d6a78d93ad15e2a7a3c483eefc92a627202a1f4167f9", size = 669583, upload-time = "2026-03-22T23:58:55.028Z" },
+    { url = "https://files.pythonhosted.org/packages/c9/e3/cbe0c99b56fedba81e8414bfa0e5a5d77642b0c111ae5327d184f64b63f6/randovania_lupa-2.0.4-cp313-cp313-macosx_11_0_universal2.whl", hash = "sha256:c00b2aa8f4a50cce865af87b6eb0d5ff80ba5d032767210ca830a7171562c780", size = 1339212, upload-time = "2026-03-22T23:58:57.072Z" },
+    { url = "https://files.pythonhosted.org/packages/20/90/b5378dd92c0dc88af6cb7f10202da979884e0d931c87152f984e86e4587b/randovania_lupa-2.0.4-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:92891963fe32fe4851b510cc7d5fe016d2c99f4dea4282eeda52163e762ac6a8", size = 707411, upload-time = "2026-03-22T23:58:59.261Z" },
+    { url = "https://files.pythonhosted.org/packages/45/bd/c9a362481585bf2d66ed2516004b50a22a3b196cdfe4d336653b7160354d/randovania_lupa-2.0.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:c6effcd5fe7dba66e314328224706bf39df19098cbe3208baeff408a347064ed", size = 754076, upload-time = "2026-03-22T23:59:01.397Z" },
+    { url = "https://files.pythonhosted.org/packages/0b/53/7e4fb536b9eefce4cee50283ca12c69965fd8864935be925da8395d79676/randovania_lupa-2.0.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:545c55eef331937aadb3dba1cbf4c4afc9c5c9fd15abac2ab6ab21f7d581cd01", size = 787758, upload-time = "2026-03-22T23:59:03.156Z" },
+    { url = "https://files.pythonhosted.org/packages/67/1b/d4ee1bfe051fb1e41d57513041000fa30eff205f7f8b860f41d1d1f83bc2/randovania_lupa-2.0.4-cp313-cp313-win_amd64.whl", hash = "sha256:5d4e85099ffd796b1d37febfeb79fc1a38347d82a2f691b0560efd358f80d1f2", size = 666133, upload-time = "2026-03-22T23:59:04.763Z" },
+    { url = "https://files.pythonhosted.org/packages/57/68/dbd79de7cc41b9c9f1e94aabb0188c508dd0dd35c67b7f06e00db72bbfa7/randovania_lupa-2.0.4-cp313-cp313t-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:56a98ab1ec88e01b2691bab9f02e88ffaf2d1f3e8471b9b4ad70f2e9330ea679", size = 801833, upload-time = "2026-03-22T23:59:06.438Z" },
+    { url = "https://files.pythonhosted.org/packages/07/5d/43eb9c1e39d8963d932d2a14971cb4633b20f05c1862d7285abd1bf07aab/randovania_lupa-2.0.4-cp314-cp314-macosx_11_0_universal2.whl", hash = "sha256:71090d8160632d56356bf73f97050d4b410c0f225fc21469b0f0595c4a63b0cc", size = 1345645, upload-time = "2026-03-22T23:59:08.092Z" },
+    { url = "https://files.pythonhosted.org/packages/67/c7/20627f00db4d1e99918284a04322a5d6216ad06c28a6b5ec7e8f8ec131c4/randovania_lupa-2.0.4-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:0194d1303abdc1ea64a49dd897be2baeaa4ba8a2dde310a0cbd8e22eda16dc1a", size = 718436, upload-time = "2026-03-22T23:59:10.396Z" },
+    { url = "https://files.pythonhosted.org/packages/ea/cb/96370ff56f2a70719e6c2a244bacc7c797d42b58dcb4c1a164a0ddebce22/randovania_lupa-2.0.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:34177d6cc291eb9225f30458225dc287902da50ecc79483eeab5302e5a69701e", size = 757337, upload-time = "2026-03-22T23:59:12.77Z" },
+    { url = "https://files.pythonhosted.org/packages/1c/de/40ec1433344ec10d6fb061c9665d023f0b9c96dddb1d03cab1d51efef15f/randovania_lupa-2.0.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:4f7e1c78e0a4f1f51b19e267587e0e327be5d3edf6d077c15f7dcf48c2c7f7d9", size = 789202, upload-time = "2026-03-22T23:59:14.67Z" },
+    { url = "https://files.pythonhosted.org/packages/7c/6d/fec1e3aecd4541ae181e18e0f695403679010be307c324f665c7b5c03004/randovania_lupa-2.0.4-cp314-cp314-win_amd64.whl", hash = "sha256:6d4f00b3cbaa99a8fc1e492cb560574d13b36732453a90067dac2511fa3e6878", size = 684666, upload-time = "2026-03-22T23:59:16.274Z" },
+    { url = "https://files.pythonhosted.org/packages/f9/17/15440d29350d4d8f0efffe2196d8a48fed2797f29a96b208cabc4a6cde59/randovania_lupa-2.0.4-cp314-cp314t-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:cb373a240891f2624d499367c563913020e156fe905fef5f5e8b812953883cae", size = 804409, upload-time = "2026-03-22T23:59:17.995Z" },
 ]
 
 [[package]]
@@ -3263,14 +3274,14 @@ wheels = [
 
 [[package]]
 name = "types-qrcode"
-version = "8.2.0.20250914"
+version = "8.2.0.20260322"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pillow" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a6/1b/b662d2baa355df5739ca084b0d959a5ce8d0e1bea742ee3e027372f89a56/types_qrcode-8.2.0.20250914.tar.gz", hash = "sha256:fc82e0112095c60c0ef3e403ab2a604a9ae1929c70fb0e708bc1ebfe8ca5c45e", size = 14988, upload-time = "2025-09-14T02:56:59.106Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a1/cf/fdc11e1ce6a9a9ac3139cc5c9450d192de8517f9ff1061e103945216ae80/types_qrcode-8.2.0.20260322.tar.gz", hash = "sha256:bb8f976104b58bb198458b99fa9432f761947eb649b2712dcf8baf6c411af200", size = 15111, upload-time = "2026-03-22T04:09:02.504Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/46/47/9105e9949a83789b6982bcbab4874ce7804f74fd27e6ab83d0186805b0aa/types_qrcode-8.2.0.20250914-py3-none-any.whl", hash = "sha256:6b992d62f05c2df0422507c5307ddd969c0a4d2ab23863c4217f96226710c308", size = 19849, upload-time = "2025-09-14T02:56:58.353Z" },
+    { url = "https://files.pythonhosted.org/packages/bd/43/e9f8ec93c14939e996c0b1ae04e7697e935a299ee378f4f2638666bc38b3/types_qrcode-8.2.0.20260322-py3-none-any.whl", hash = "sha256:91ddf8b648dd4b69b934aeb41a402a87f3cb50a678ec704b7d3fc75e21173288", size = 19867, upload-time = "2026-03-22T04:09:01.524Z" },
 ]
 
 [[package]]
