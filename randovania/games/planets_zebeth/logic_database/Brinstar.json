@@ -336,7 +336,7 @@
                                     {
                                         "type": "and",
                                         "data": {
-                                            "comment": "https://youtu.be/xpj3fpkDejQ",
+                                            "comment": "https://youtu.be/xpj3fpkDejQ, can unmorph jump halfway through to avoid the spam at top",
                                             "items": [
                                                 {
                                                     "type": "template",
@@ -357,7 +357,7 @@
                                     {
                                         "type": "and",
                                         "data": {
-                                            "comment": "TODO super jump trick https://youtu.be/PM3R8Y9ZLwM",
+                                            "comment": "https://youtu.be/PM3R8Y9ZLwM",
                                             "items": [
                                                 {
                                                     "type": "template",
@@ -376,7 +376,7 @@
                                                     "type": "resource",
                                                     "data": {
                                                         "type": "tricks",
-                                                        "name": "IBJ",
+                                                        "name": "UnmorphJump",
                                                         "amount": 1,
                                                         "negate": false
                                                     }
@@ -1624,7 +1624,7 @@
                                     {
                                         "type": "and",
                                         "data": {
-                                            "comment": "https://youtu.be/GgSowN-UNIM; TODO: Add a trick for bomb-jump from the ledge https://youtu.be/6oJ6Kl0xAmY",
+                                            "comment": "https://youtu.be/GgSowN-UNIM",
                                             "items": [
                                                 {
                                                     "type": "template",
@@ -1635,6 +1635,27 @@
                                                     "data": {
                                                         "type": "tricks",
                                                         "name": "IBJ",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": "https://youtu.be/6oJ6Kl0xAmY",
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Use Bombs"
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "UnmorphJump",
                                                         "amount": 1,
                                                         "negate": false
                                                     }
@@ -3334,7 +3355,7 @@
                                     {
                                         "type": "and",
                                         "data": {
-                                            "comment": "https://youtu.be/c-mIHuhI01I; TODO add super jump trick https://youtu.be/R4ov8j87vQQ",
+                                            "comment": "https://youtu.be/c-mIHuhI01I",
                                             "items": [
                                                 {
                                                     "type": "template",
@@ -3346,6 +3367,27 @@
                                                         "type": "tricks",
                                                         "name": "IBJ",
                                                         "amount": 2,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": "https://youtu.be/R4ov8j87vQQ",
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Use Bombs"
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "UnmorphJump",
+                                                        "amount": 1,
                                                         "negate": false
                                                     }
                                                 }

@@ -58,10 +58,10 @@ Extra - map_name: Brinstar/x128_y202
       Any of the following:
           # Freeze a Zoomer to the wall and jump off it; https://youtu.be/2GBsMhsgyhk
           Ice Beam and Stand On Frozen Enemies (Beginner)
-          # https://youtu.be/xpj3fpkDejQ
+          # https://youtu.be/xpj3fpkDejQ, can unmorph jump halfway through to avoid the spam at top
           IBJ (Intermediate) and Can Use Bombs
-          # TODO super jump trick https://youtu.be/PM3R8Y9ZLwM
-          Hi-Jump Boots and IBJ (Beginner) and Can Use Bombs
+          # https://youtu.be/PM3R8Y9ZLwM
+          Hi-Jump Boots and Unmorph Jump (Beginner) and Can Use Bombs
 
 > Door to Blue Tower; Heals? False
   * Layers: default
@@ -289,8 +289,10 @@ Extra - map_name: Brinstar/x312_y30
           Hi-Jump Boots
           # Guide the enemy up and freeze it https://youtu.be/y4qCIB5QAL8?si
           Ice Beam and Stand On Frozen Enemies (Intermediate)
-          # https://youtu.be/GgSowN-UNIM; TODO: Add a trick for bomb-jump from the ledge https://youtu.be/6oJ6Kl0xAmY
+          # https://youtu.be/GgSowN-UNIM
           IBJ (Beginner) and Can Use Bombs
+          # https://youtu.be/6oJ6Kl0xAmY
+          Unmorph Jump (Beginner) and Can Use Bombs
   > Door to Green Sanctuary E
       Trivial
 
@@ -610,6 +612,8 @@ Extra - map_name: Brinstar/x344_y113
   > Door to Blue Rocks Central
       Any of the following:
           Hi-Jump Boots or Ice Beam or Damage Boost (Intermediate)
-          # https://youtu.be/c-mIHuhI01I; TODO add super jump trick https://youtu.be/R4ov8j87vQQ
+          # https://youtu.be/c-mIHuhI01I
           IBJ (Intermediate) and Can Use Bombs
+          # https://youtu.be/R4ov8j87vQQ
+          Unmorph Jump (Beginner) and Can Use Bombs
 
