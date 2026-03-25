@@ -36,7 +36,7 @@ def force_field_index_for_requirement(game: GameDescription, requirement: Layout
 ITEM_SPAWN_ENTITY_TYPE: Final = 4
 ARTIFACT_ENTITY_TYPE: Final = 17
 OCTOLITH_MODEL_ID: Final = 8
-NOTHING_ITEM_TYPE: Final = 21
+NOTHING_ITEM_TYPE: Final = 17
 
 _ARTIFACT_TO_MODEL_ID = {
     "AlinosArtifact1": 0,
@@ -182,7 +182,11 @@ class HuntersPatchDataFactory(PatchDataFactory[HuntersConfiguration, HuntersCosm
             }
 
             for area in region.areas:
-                level_data[region.name]["levels"][area.name] = {
+                area_name = area.name
+                # Remove region name from room name
+                if area_name.startswith(("Biodefense Chamber", "Stronghold Void")):
+                    area_name = area_name[:20]
+                level_data[region.name]["levels"][area_name] = {
                     "pickups": self._get_pickups_for_area(area),
                     "force_fields": self._get_force_fields_for_area(area, self.patches.game_specific["force_fields"]),
                     "portals": self._get_portals_for_area(area),
