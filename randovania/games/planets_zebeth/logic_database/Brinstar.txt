@@ -350,7 +350,11 @@ Extra - map_name: Brinstar/x472_y67
   * Layers: default
   * Normal Door to Item Corridor (Bombs)/Door to Orange Tower 2
   > Door to Green Sanctuary E
-      Hi-Jump Boots and Ice Beam
+      Any of the following:
+          # Freeze the rippers
+          Hi-Jump Boots and Ice Beam
+          # Taking damage is likely/inevitable; https://youtu.be/CLnc2MzPPL8
+          IBJ (Advanced) and Normal Damage ≥ 50 and Can Use Bombs
   > Door to Blue Rocks East
       Trivial
 
