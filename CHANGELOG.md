@@ -20,6 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Metroid Fusion
 
+- Fixed: The credits text for random starting items now appears correctly.
+
 #### Logic Database
 
 - Changed: Blue-X Damage has been separated from Cold Damage.
