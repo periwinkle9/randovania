@@ -2924,7 +2924,7 @@ requires-dist = [
     { name = "qasync", marker = "extra == 'gui'" },
     { name = "qrcode", extras = ["pil"], marker = "extra == 'gui'", specifier = ">=8.0" },
     { name = "random-enemy-attributes", marker = "extra == 'exporters'", specifier = "==1.0.4.3" },
-    { name = "retro-data-structures", marker = "extra == 'exporters'", specifier = ">=0.33" },
+    { name = "retro-data-structures", marker = "extra == 'exporters'", specifier = ">=0.34" },
     { name = "ruamel-yaml", marker = "extra == 'website'" },
     { name = "rustworkx", specifier = ">=0.17.1" },
     { name = "sentry-sdk" },
@@ -2994,7 +2994,7 @@ wheels = [
 
 [[package]]
 name = "retro-data-structures"
-version = "0.33.0"
+version = "0.34.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "construct" },
@@ -3004,9 +3004,9 @@ dependencies = [
     { name = "pycryptodome" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/12/e0/9a6ee593cf980d6cb3dd90cd35a7355805cda962bf5e540c0a1311a9d58a/retro_data_structures-0.33.0.tar.gz", hash = "sha256:b4a402ae74718834fabccd42f7f964910192999775f43b88777c0e257b16c8b4", size = 1952921, upload-time = "2025-10-29T20:43:42.913Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/3d/6b/92d5d71d520e6773f9ad2898737ddeae6718a272dc9225ad2f9d1f55cc22/retro_data_structures-0.34.0.tar.gz", hash = "sha256:526f22121e3925d3817df54a32de4dd00b83ea9d2f4aafeb5261f767e8068e60", size = 1952843, upload-time = "2026-03-28T21:22:02.116Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ff/ff/3efccde7ded445ff4f686c019bf2a8f8e453f1846f79e4e46e88841cba97/retro_data_structures-0.33.0-py3-none-any.whl", hash = "sha256:6af7e8a60e82e7194392645f5b277407b6ce9252f994d736f67ab53a63f7bfee", size = 4013665, upload-time = "2025-10-29T20:43:40.945Z" },
+    { url = "https://files.pythonhosted.org/packages/4f/c9/6923374c3a8d50637b7f49fd2a2545bd2703a8beef67338389e3ca6cf9c8/retro_data_structures-0.34.0-py3-none-any.whl", hash = "sha256:faccaf59af42fe41fac5a3ec3ce61bc594c1ef1174a9f6683e872c80ce22a954", size = 4013566, upload-time = "2026-03-28T21:22:00.144Z" },
 ]
 
 [[package]]
