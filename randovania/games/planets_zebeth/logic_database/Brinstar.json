@@ -310,7 +310,33 @@
                                     {
                                         "type": "and",
                                         "data": {
-                                            "comment": "Freeze a Zoomer to the wall and jump off it; https://youtu.be/2GBsMhsgyhk",
+                                            "comment": "Freeze and jump off the Skree",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "Ice Beam",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "Hi-Jump",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": "https://youtu.be/2GBsMhsgyhk Freeze a Zoomer to the wall and jump off it",
                                             "items": [
                                                 {
                                                     "type": "resource",
@@ -336,7 +362,7 @@
                                     {
                                         "type": "and",
                                         "data": {
-                                            "comment": "https://youtu.be/xpj3fpkDejQ, can unmorph jump halfway through to avoid the spam at top",
+                                            "comment": "https://youtu.be/xpj3fpkDejQ",
                                             "items": [
                                                 {
                                                     "type": "template",

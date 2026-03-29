@@ -56,9 +56,11 @@ Extra - map_name: Brinstar/x128_y202
       Morph Ball
   > Pickup (Energy Tank)
       Any of the following:
-          # Freeze a Zoomer to the wall and jump off it; https://youtu.be/2GBsMhsgyhk
+          # Freeze and jump off the Skree
+          Hi-Jump Boots and Ice Beam
+          # https://youtu.be/2GBsMhsgyhk Freeze a Zoomer to the wall and jump off it
           Ice Beam and Stand On Frozen Enemies (Beginner)
-          # https://youtu.be/xpj3fpkDejQ, can unmorph jump halfway through to avoid the spam at top
+          # https://youtu.be/xpj3fpkDejQ
           IBJ (Intermediate) and Can Use Bombs
           # https://youtu.be/PM3R8Y9ZLwM
           Hi-Jump Boots and Unmorph Jump (Beginner) and Can Use Bombs
