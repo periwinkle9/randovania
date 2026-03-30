@@ -654,7 +654,7 @@ else:
     @pytest.fixture
     def skip_qtbot(request: pytest.FixtureRequest) -> QtBot:
         pytest.skip()
-        return "no qtbot"  # noqa
+        return "no qtbot"
 
     @pytest.fixture(scope="session")
     def qapp_cls(request: pytest.FixtureRequest) -> None:
@@ -707,6 +707,7 @@ SOLO_RDVGAMES = [
     ("fusion/all_hidden_with_nothing.rdvgame", True),
     ("fusion/all_hidden_with_random.rdvgame", True),
     ("fusion/starting_items.rdvgame", True),
+    ("fusion/lots_of_random_starting_items.rdvgame", True),
     # Dread
     ("dread/vanilla.rdvgame", True),  # vanilla
     ("dread/starter_preset.rdvgame", False),  # starter preset
@@ -733,6 +734,7 @@ SOLO_RDVGAMES = [
     ("prime1_crazy_seed.rdvgame", False),  # chaos features
     ("prime1_crazy_seed_one_way_door.rdvgame", True),  # same as above but 1-way doors
     ("prime1_refills.rdvgame", True),  # Refill items + custom artifact count
+    ("prime1/damage-check.rdvgame", False),
     # Prime 2
     ("seed_a.rdvgame", True),  # extremely old rdvgame
     ("prime2_seed_b.rdvgame", True),

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import typing
 from random import Random
-from typing import TYPE_CHECKING, override
+from typing import TYPE_CHECKING, ClassVar, override
 
 from randovania import monitoring
 from randovania.exporter import item_names
@@ -111,7 +111,7 @@ class AM2RPatchDataFactory(PatchDataFactory[AM2RConfiguration, AM2RCosmeticPatch
     _EASTER_EGG_SHINY = 1024
 
     # Effect, sprite, header => new_sprite, new_header
-    SHINIES = {
+    SHINIES: ClassVar[dict[tuple[str, str, str], tuple[str, str]]] = {
         ("Missile Tank", "sItemMissile", "Got Missile Tank"): ("sItemShinyMissile", "Got Shiny Missile Tank"),
         ("Hi-Jump Boots", "sItemHijump", "Hi-Jump Boots acquired"): (
             "sItemShinyHijump",

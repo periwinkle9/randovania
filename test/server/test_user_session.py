@@ -1,13 +1,12 @@
 from __future__ import annotations
 
-import datetime
 import json
 import urllib.parse
 from typing import TYPE_CHECKING
 from unittest.mock import ANY, AsyncMock, MagicMock
 
 import pytest
-from fastapi import Request  # noqa: TC002
+from fastapi import Request
 from fastapi.responses import RedirectResponse
 
 from randovania.network_common import error
@@ -15,7 +14,7 @@ from randovania.network_common.error import InvalidSessionError
 from randovania.server import user_session
 from randovania.server.database import User
 from randovania.server.fastapi_discord import exceptions as fd_exceptions
-from randovania.server.server_app import ServerAppDep  # noqa: TC001
+from randovania.server.server_app import ServerAppDep
 
 if TYPE_CHECKING:
     import pytest_mock
@@ -52,7 +51,7 @@ async def test_browser_login_with_discord(has_sio, mock_sa, mock_request, mocker
     mock_render = mocker.patch("randovania.server.user_session.unable_to_login")
 
     mock_sa.discord.get_oauth_login_url.return_value = "http://fakeurl.gg"
-    mock_sa.configuration = {"server_config": {"secret_key": "secret"}}
+    mock_sa.configuration = {"server_config": {"secret_key": "secret-key-long-enough-for-hs256"}}
 
     server = mock_sa.sio
     server.rooms.return_value = ["THE_SID"] if has_sio is True else []
@@ -300,30 +299,6 @@ async def test_restore_user_session_with_discord(mock_sa, fernet, mocker: pytest
     assert result is discord_result
 
 
-async def test_login_with_guest(mock_sa, mocker):
-    # Setup
-    mocker.patch("randovania.server.user_session._get_now", return_value=datetime.datetime(year=2020, month=9, day=4))
-    mock_create_session = mocker.patch("randovania.server.user_session._create_client_side_session", autospec=True)
-    enc_request = b"encrypted stuff"
-
-    mock_sa.guest_encrypt.decrypt.return_value = json.dumps(
-        {
-            "name": "Someone",
-            "date": "2020-09-05T17:12:09.941661",
-        }
-    ).encode("utf-8")
-
-    result = await user_session.login_with_guest(mock_sa, "TheSid", enc_request)
-
-    # Assert
-    mock_sa.guest_encrypt.decrypt.assert_called_once_with(enc_request)
-    user: User = User.get_by_id(1)
-    assert user.name == "Guest: Someone"
-
-    mock_create_session.assert_called_once_with(mock_sa, "TheSid", user)
-    assert result is mock_create_session.return_value
-
-
 async def test_logout(mock_sa, mocker: MockerFixture):
     mock_leave_all_rooms = mocker.patch("randovania.server.multiplayer.session_common.leave_all_rooms", autospec=True)
 
@@ -416,3 +391,9 @@ async def test_guest_login_post_not_debug(test_client):
     response = test_client.post("/guest_login", headers={"Accept": "application/json"}, data={"name": "Foo"})
     assert response.status_code == 400
     assert response.json() == {"error_message": "Unable to perform login"}
+
+
+async def test_authentication_methods(test_client, is_dev_version):
+    response = test_client.get("/authentication_methods")
+
+    assert response.json() == ["guest", "discord"]

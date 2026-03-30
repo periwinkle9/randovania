@@ -21,7 +21,7 @@ def discover_game(iso_path: Path) -> tuple[str, str] | None:
         return None
 
     try:
-        disc, is_wii = nod.open_disc_from_image(iso_path)
+        disc, _is_wii = nod.open_disc_from_image(iso_path)
         data_partition: nod.Partition = disc.get_data_partition()
         header: nod.DolHeader = data_partition.get_header()
     except RuntimeError as e:

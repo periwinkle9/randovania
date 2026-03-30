@@ -1456,7 +1456,7 @@ Extra - minimap_coordinates: [{'x': 10, 'y': 12}, {'x': 11, 'y': 12}, {'x': 12, 
               # Get past Rippers
               Space Jump
               # Run and jump through acid: https://youtu.be/2HZNcwNVLH0
-              Damage Runs (Intermediate) and Normal Damage ≥ 90
+              Damage Runs (Intermediate) and Acid Damage ≥ 90
               # Navigate room with an ice weapon https://youtu.be/3gxkQTbymVQ
               Stand On Frozen Enemies (Advanced) and Can Freeze Enemies With Any Weapon
 
@@ -1471,7 +1471,7 @@ Extra - minimap_coordinates: [{'x': 10, 'y': 12}, {'x': 11, 'y': 12}, {'x': 12, 
               # Get past Rippers
               Space Jump
               # Run and jump through the acid: https://youtu.be/BPF8pppB7po
-              Damage Runs (Intermediate) and Normal Damage ≥ 130
+              Damage Runs (Intermediate) and Acid Damage ≥ 130
               # Navigate the room with an Ice Weapon: https://youtu.be/rjzsSJlkeKw
               Stand On Frozen Enemies (Advanced) and Can Freeze Enemies With Any Weapon
 

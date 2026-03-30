@@ -168,7 +168,7 @@ class MSRExecutor:
             await self._read_response()
 
             loop = asyncio.get_event_loop()
-            loop.create_task(self.read_loop())
+            self._read_loop_task = loop.create_task(self.read_loop())
             self.logger.info("Connected")
 
             return None

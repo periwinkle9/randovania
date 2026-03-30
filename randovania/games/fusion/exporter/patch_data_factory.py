@@ -33,7 +33,7 @@ if TYPE_CHECKING:
 class FusionPatchDataFactory(PatchDataFactory[FusionConfiguration, FusionCosmeticPatches]):
     _placeholder_metroid_message = "placeholder metroid text"
     _metroid_message_id = 56
-    _lang_list = ["JapaneseKanji", "JapaneseHiragana", "English", "German", "French", "Italian", "Spanish"]
+    _lang_list = ("JapaneseKanji", "JapaneseHiragana", "English", "German", "French", "Italian", "Spanish")
     _easter_egg_bob = 64
     _easter_egg_shiny = 1024
 
@@ -420,7 +420,8 @@ class FusionPatchDataFactory(PatchDataFactory[FusionConfiguration, FusionCosmeti
                 region_name = location["Region"]
                 area_name = location["Area"]
                 # We want to avoid displaying something like "s3 - s3 blabla", so remove possible redundancies like that
-                if area_name.startswith(region_name):
+                # Also need to ignore the case of random starting items where region name is blank
+                if area_name.startswith(region_name) and region_name != "":
                     area_name = area_name[len(region_name) + 1 :]
                 world_name = location["World"] if location["World"] else ""
 

@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING
 import mp2hudcolor  # type: ignore[import-untyped]
 from open_prime_rando.dol_patching.echoes import dol_patcher
 from ppc_asm import dol_file
-from retro_data_structures.asset_manager import AssetManager, PathFileProvider
+from retro_data_structures.asset_manager import AssetManager, PathFileProvider, PathFileWriter
 from retro_data_structures.game_check import Game as RDSGame
 
 from randovania import monitoring
@@ -70,7 +70,7 @@ class EchoesGameExporter(GameExporter[EchoesGameExportParams]):
         progress_update: status_update_lib.ProgressUpdateCallable,
         randovania_meta: PatcherDataMeta,
     ) -> None:
-        new_patcher = patch_data.pop("new_patcher", None)
+        new_patcher: dict | None = patch_data.pop("new_patcher", None)
         monitoring.set_tag("echoes_new_patcher", new_patcher is not None)
 
         # restore backups
@@ -145,19 +145,22 @@ class EchoesGameExporter(GameExporter[EchoesGameExportParams]):
 
         claris_randomizer.apply_patcher_file(contents_files_path, patch_data, randomizer_data, claris_update)
 
-        dol_patcher.apply_patches(
-            dol_file.DolFile(contents_files_path.joinpath("sys/main.dol")),
-            dol_patcher.EchoesDolPatchesData.from_json(patch_data["dol_patches"]),
-        )
+        dol = dol_file.DolFile(contents_files_path.joinpath("sys/main.dol"))
+        dol.set_editable(True)
+        with dol:
+            dol_patcher.apply_patches(
+                dol,
+                dol_patcher.EchoesDolPatchesData.from_json(patch_data["dol_patches"]),
+            )
 
         # New Patcher
         if new_patcher is not None:
             opr_update = updaters.pop(0)
 
-            with monitoring.trace_block("open_prime_rando.echoes_patcher.patch_paks"):
-                import open_prime_rando.echoes_patcher
+            with monitoring.trace_block("open_prime_rando.echoes.legacy_patcher.patch_paks"):
+                import open_prime_rando.echoes.legacy_patcher
 
-                open_prime_rando.echoes_patcher.patch_paks(
+                open_prime_rando.echoes.legacy_patcher.patch_paks(
                     PathFileProvider(contents_files_path), contents_files_path, new_patcher, opr_update
                 )
 
@@ -202,4 +205,4 @@ def copy_coin_chest(contents_path: Path) -> None:
         for pak in paks:
             manager.ensure_present(pak, dep.id)
 
-    manager.save_modifications(contents_path.joinpath("files"))
+    manager.save_modifications(PathFileWriter(contents_path))

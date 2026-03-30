@@ -30,8 +30,8 @@ if TYPE_CHECKING:
 
     from randovania.lib.status_update_lib import ProgressUpdateCallable
 
-PRIME_MODELS_VERSION = 1
-ECHOES_MODELS_VERSION = 3
+PRIME_MODELS_VERSION = 2
+ECHOES_MODELS_VERSION = 4
 
 
 def delete_converted_assets(assets_dir: Path):

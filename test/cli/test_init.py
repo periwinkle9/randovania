@@ -49,7 +49,7 @@ def test_parse_args_invalid(args):
     # Run
     parser = cli.create_parser()
 
-    with pytest.raises(SystemExit, match="^0$"):
+    with pytest.raises(SystemExit, match=r"^0$"):
         parser.parse_args(args)
 
 
@@ -74,7 +74,7 @@ def test_run_args_without_func():
     args.func = None
 
     # Run
-    with pytest.raises(SystemExit, match="^1$"):
+    with pytest.raises(SystemExit, match=r"^1$"):
         cli._run_args(parser, args)
 
     # Assert

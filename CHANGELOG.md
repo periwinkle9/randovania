@@ -5,9 +5,50 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [10.6.0] - 2026-04-??
+## [10.7.0] - 2026-05-??
 
-- TODO: New changes go here!
+- Nothing yet.
+
+## [10.6.0] - 2026-04-01
+
+- Fixed: The resolver now correctly handles damage requirements with item alternatives.
+
+### Metroid Dread
+
+#### Logic Database
+
+##### Burenia
+
+- Added: Underneath Drogyga: Cross the grapple blocks with a horizontal bomb jump (Expert Diagonal Bomb Jump)
+- Added: Underneath Drogyga: Climb out of the water after drogyga using single-wall wall jump with a water bomb jump
+
+### Metroid Fusion
+
+- Fixed: The credits text for random starting items now appears correctly.
+
+#### Logic Database
+
+- Changed: Blue-X Damage has been separated from Cold Damage.
+- Changed: Acid Damage has been separated from Normal Damage.
+
+##### Sector 1 (SRX)
+
+- Update Ripper Sauna to use Acid Damage.
+
+##### Sector 6 (NOC)
+
+- Fixed: Nocturnal Shaft: When going from top right to top left, damage boosting through the Blue-X now correctly expects at least 70 health.
+
+### Metroid Prime
+
+- Fixed: Metroid Prime Lair: Black screen softlock if Subchamber Five cutscene is skipped late
+- Fixed: Burn Dome: Wasps remain active if Incinerator Drone death cutscene is skipped on first frame
+- Fixed: [PAL] Frost Cave: Game stutter when loading Hunter Metroid layer
+
+### Metroid Prime 2: Echoes
+
+- Fixed: All custom randomizer text now properly appears in all languages, though always in English.
+
 
 ## [10.5.0] - 2026-03-02
 

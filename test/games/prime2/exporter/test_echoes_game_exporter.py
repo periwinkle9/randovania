@@ -65,7 +65,7 @@ def test_do_export_game(
     mock_create_backup = mocker.patch("randovania.games.prime2.patcher.claris_randomizer.create_pak_backups")
     mock_restore_backup = mocker.patch("randovania.games.prime2.patcher.claris_randomizer.restore_pak_backups")
     mock_apply_patcher = mocker.patch("randovania.games.prime2.patcher.claris_randomizer.apply_patcher_file")
-    mock_patch_paks = mocker.patch("open_prime_rando.echoes_patcher.patch_paks")
+    mock_patch_paks = mocker.patch("open_prime_rando.echoes.legacy_patcher.patch_paks")
     mock_mp2hudcolor_c = mocker.patch("mp2hudcolor.mp2hudcolor_c")
     mock_convert_prime1 = mocker.patch("randovania.patching.prime.asset_conversion.convert_prime1_pickups")
     mock_menu_mod = mocker.patch("randovania.games.prime2.patcher.claris_randomizer.add_menu_mod_to_files")

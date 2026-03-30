@@ -10300,7 +10300,7 @@
                                                                 "type": "resource",
                                                                 "data": {
                                                                     "type": "damage",
-                                                                    "name": "NormalDamage",
+                                                                    "name": "AcidDamage",
                                                                     "amount": 90,
                                                                     "negate": false
                                                                 }
@@ -10423,7 +10423,7 @@
                                                                 "type": "resource",
                                                                 "data": {
                                                                     "type": "damage",
-                                                                    "name": "NormalDamage",
+                                                                    "name": "AcidDamage",
                                                                     "amount": 130,
                                                                     "negate": false
                                                                 }

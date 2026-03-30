@@ -87,16 +87,16 @@ exporters = [
     "mars-patcher==0.12.0",
 
     # Metroid Planets
-    "planets-yapr==1.0.1",
+    "planets-yapr==1.0.2",
 
     # Metroid Prime 1
-    "py_randomprime==1.30.3",
+    "py_randomprime==1.30.4",
     "random-enemy-attributes==1.0.4.3",
 
     # Metroid Prime 1/2
     "ppc-asm>=1.2.1",  # for multiworld
-    "open-prime-rando==0.15.1",  # but also for echoes exporting
-    "retro-data-structures>=0.24.0,<0.29",  # Newer versions break asset conversion and needs adjusting
+    "open-prime-rando==0.16.0",  # but also for echoes exporting
+    "retro-data-structures>=0.34",
 
     # Metroid Prime 2
     "mp2hudcolor==1.0.13",
@@ -106,7 +106,7 @@ exporters = [
 ]
 
 gui = [
-    "PySide6-Essentials==6.10.0",
+    "PySide6-Essentials==6.10.2",
     "pyqtdarktheme-fork>=2.3.0",
     "markdown",
     "qasync",
@@ -138,14 +138,14 @@ server = [
     # discord auth
     "aiocache",  # for fastapi_discord copy
     "oauthlib",
-    "pyjwt<2.11.0",
+    "pyjwt",
 
     # database
-    "peewee",
+    "peewee<4",
     "cachetools",  # for TTLCache
 
     # discord bot
-    "py-cord>=2.3.1,<2.7",  # for randovania/discord_bot; 2.3.1+ is needed for Python 3.11, 2.7 breaks tests
+    "py-cord>=2.7.1,<2.8",  # for randovania/discord_bot; 2.3.1+ is needed for Python 3.11, 2.7 breaks tests
     "audioop-lts; python_version>='3.13'",  # for py-cord
     "Pillow>=9.0.0",  # for randovania/discord_bot/database_command
     "graphviz",  # for randovania/discord_bot/database_command
@@ -179,7 +179,7 @@ installer = [
 typing = [
     "mypy<1.19.2",
     "types-aiofiles",
-    "types-peewee",
+    "types-peewee<4",
     "types-qrcode>=8.0.0.20241004",
     "python-socketio-stubs",
     "types-oauthlib",
@@ -224,24 +224,35 @@ extend-exclude = [
 ]
 
 [tool.ruff.lint]
-select = [
-    "E", "F", "W", "C90", "I", "UP", "C4",
-    "RSE",
-    "TCH",
-    "PTH",
-    "COM818", "COM819",
-    "ISC",
-    "PIE",
-    "PT",
+extend-select = [
+    "E", # PyCodeStyle Errors
+    "F", # Pyflakes (Errors/Warnings)
+    "W", # PyCodeStyle Warnings
+    "I", # Import Sorting (isort)
+    "UP", # Python Upgrades (pyupgrade)
+    "C4", # Comprehensions (flake8-comprehensions)
+    "C90", # complexity (mccabe)
+    "RSE", # flake8-raise (RSE)
+    "PTH", # use pathlib
+    "COM818", "COM819", # trailing comma
+    "ISC", # flake8-implicit-str-concat
+    "PIE", # flake8-pie (misc checks)
+    "PT", # common style issues or inconsistencies with pytest-based tests (flake8-pytest-style)
+    "SIM101", # Multiple isinstance calls for {name}, merge into a single call
+    "RUF",  # Ruff-specific rules
 
-    "PLC",
+    "PLC",  # pylint convention
     "PLC0208",  # iterating over set is also not deterministic, so we shouldn't do that!
+    "PLE",  # pylint error
+    "PLW",  # pylint warning
 
-    "PLE",
-    "PLR0402", "PLR1711", "PLR1722", "PLR0206",
-    "PLR0133", "PLR0124",
-    "PLW",
-    "SIM101",
+    # pylint refactor
+    "PLR0402", # Use from {module} import {name} in lieu of alias
+    "PLR1711", # Useless return statement at end of function
+    "PLR1722", # Use sys.exit() instead of {name}
+    "PLR0206", # Cannot have defined parameters for properties
+    "PLR0133", # Two constants compared in a comparison, consider replacing {left_constant} {op} {right_constant}
+    "PLR0124", # Name compared with itself, consider replacing {actual}
 ]
 ignore = [
     "ISC001",  # may cause conflicts with formatter
@@ -354,6 +365,7 @@ files = [
     "test/gui/dialog/test_connections_editor.py",
     "test/gui/widgets/test_node_selector_widget.py",
     "test/lib/",
+    "test/network_client/test_network_client.py",
     "test/resolver/test_logging.py",
 ]
 follow_imports = "silent"

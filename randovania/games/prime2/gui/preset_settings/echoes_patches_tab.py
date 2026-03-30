@@ -22,14 +22,18 @@ class PresetEchoesPatches(PresetTab, Ui_PresetEchoesPatches):
 
         self.include_menu_mod_label.setText(self.include_menu_mod_label.text().replace("color:#0000ff;", ""))
         for widget in [
-            self.inverted_check,
-            self.inverted_label,
-            self.inverted_line,
             self.portal_rando_check,
             self.portal_rando_label,
             self.portal_rando_line,
         ]:
             widget.setVisible(randovania.is_dev_version())
+
+        for widget in [
+            self.inverted_check,
+            self.inverted_label,
+            self.inverted_line,
+        ]:
+            widget.setVisible(False)
 
         # Signals
         self.warp_to_start_check.stateChanged.connect(self._persist_option_then_notify("warp_to_start"))
