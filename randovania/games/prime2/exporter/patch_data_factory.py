@@ -635,6 +635,12 @@ class EchoesPatchDataFactory(PatchDataFactory[EchoesConfiguration, EchoesCosmeti
         }
 
     def create_game_specific_data(self, randovania_meta: PatcherDataMeta) -> dict[str, typing.Any]:
+        if self.configuration.use_new_patcher == EchoesNewPatcher.ONLY:
+            return self._modern_patcher(randovania_meta)
+        else:
+            return self._legacy_patcher(randovania_meta)
+
+    def _legacy_patcher(self, randovania_meta: PatcherDataMeta) -> dict[str, typing.Any]:
         result: dict[str, typing.Any] = {}
         _add_header_data_to_result(self.description, result)
 
@@ -736,7 +742,23 @@ class EchoesPatchDataFactory(PatchDataFactory[EchoesConfiguration, EchoesCosmeti
         if self.configuration.use_new_patcher.is_enabled():
             result["new_patcher"] = self.new_patcher_configuration()
 
-        result["new_patcher_only"] = self.configuration.use_new_patcher == EchoesNewPatcher.ONLY
+        result["new_patcher_only"] = False
+
+        return result
+
+    def _modern_patcher(self, randovania_meta: PatcherDataMeta) -> dict[str, typing.Any]:
+        result: dict[str, typing.Any] = {
+            "new_patcher_only": True,
+        }
+
+        starting_area = _area_identifier_to_json(self.game.region_list, self.patches.starting_location.area_identifier)
+        result["starting_area"] = {
+            "mlvl_id": starting_area["world_asset_id"],
+            "mrea_id": starting_area["area_asset_id"],
+        }
+
+        if self.configuration.menu_mod:
+            result["practice_mod"] = "full"
 
         return result
 
