@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [10.7.0] - 2026-05-??
 
-- Nothing yet.
+### Metroid Fusion
+
+- Add: Door Lock Randomizer is now available.
 
 ## [10.6.0] - 2026-04-01
 
