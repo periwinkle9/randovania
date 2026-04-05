@@ -7893,7 +7893,7 @@
         },
         "dock_rando": {
             "force_change_two_way": true,
-            "resolver_attempts": 250,
+            "resolver_attempts": 500,
             "to_shuffle_proportion": 0.6
         }
     },
