@@ -894,7 +894,7 @@ Hint Features - Multiple Pickups, 1-way Shutter
           Any of the following:
               All of the following:
                   Any of the following:
-                      # Vanilla Method - Freeze an Owtch on the Crumble Blocks and use regulare Bombs to open the passage: https://youtu.be/4y7ohyL0zkE&t=47
+                      # Vanilla Method - Freeze an Owtch on the Crumble Blocks and use regular Bombs to open the passage: https://youtu.be/4y7ohyL0zkE&t=47
                       Can Use Bombs
                       # Wait for an Owtch to get far enough away and then open the passage with a Power Bomb: https://youtu.be/6ESqvHW7Qyk
                       Wave Beam and Can Use Power Bombs and Have Any Jump Upgrade
