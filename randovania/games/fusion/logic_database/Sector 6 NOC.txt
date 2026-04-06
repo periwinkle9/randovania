@@ -905,6 +905,12 @@ Hint Features - Multiple Pickups, 1-way Shutter
               Movement (Expert)
               # Spam bombs to hover across: https://youtu.be/4y7ohyL0zkE&t=37
               Movement (Advanced) and Can Use Bombs
+              All of the following:
+                  # Wait for an Owtch to get far enough away and then open the passage with a Power Bomb: https://youtu.be/6ESqvHw7Qyk
+                  Screw Attack and Can Use Power Bombs and Have Any Jump Upgrade
+                  Any of the following:
+                      Can Freeze Enemies With Diffusion
+                      Wave Beam and Can Freeze Enemies With Ice Beam
   > Door to X-B.O.X. Arena (Lower)
       Screw Attack
 
