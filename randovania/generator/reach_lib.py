@@ -129,7 +129,23 @@ def advance_after_action(previous_reach: GeneratorReach) -> GeneratorReach:
                 if previous_safe_nodes <= experimental_reach.safe_nodes_index_set:
                     # print("Non-safe {} could reach back to where we were".format(action.full_name()))
                     return advance_after_action(experimental_reach)
+        for next_action in get_collectable_resource_nodes_of_reach(next_reach):
+            # This loop is largely the same logic as above, and exists for the purpose of trying a second possibly
+            # unsafe action to get an even deeper evaluation of new safe resources.
 
+            next_next_reach = copy.deepcopy(next_reach)
+            next_next_reach.act_on(next_action)
+            collect_all_safe_resources_in_reach(next_next_reach)
+
+            if previous_safe_nodes <= next_next_reach.safe_nodes_index_set:
+                if next_next_reach.is_reachable_node(initial_state.node):
+                    experimental_reach = _get_reach_class().reach_from_state(
+                        graph, next_next_reach.state.copy(), previous_reach.filler_config
+                    )
+
+                    if previous_safe_nodes <= experimental_reach.safe_nodes_index_set:
+                        # print("Non-safe {} could reach back to where we were".format(action.full_name()))
+                        return advance_after_action(experimental_reach)
         # print("Non-safe {} was skipped".format(action.full_name()))
 
     # We couldn't improve this reach, so just return it

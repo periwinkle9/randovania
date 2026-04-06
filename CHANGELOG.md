@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [10.7.0] - 2026-05-??
 
+### Generator
+
+- Changed: The check for which resources are unlocked safely after an action calculates deeper.
+
 ### Metroid Dread
 
 - Changed: Increased likelihood that doors that are logically challenging to reach get locks when using Individual Doors mode to randomize Door Locks.
