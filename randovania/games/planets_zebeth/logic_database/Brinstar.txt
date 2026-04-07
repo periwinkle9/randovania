@@ -15,7 +15,10 @@ Extra - map_name: Brinstar/x47_y202
   * Pickup 0; Category? Major
   * Extra - object_id: 100018
   > Starting Point
-      Hi-Jump Boots or Morph Ball
+      Any of the following:
+          Hi-Jump Boots or Morph Ball
+          # https://youtu.be/Rx9tGIVI68k
+          Ice Beam and Stand On Frozen Enemies (Advanced)
 
 > Door to Early Construction; Heals? False
   * Layers: default

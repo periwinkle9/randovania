@@ -666,7 +666,8 @@
     "used_trick_levels": {
         "IceAbuse": [
             1,
-            2
+            2,
+            3
         ],
         "IBJ": [
             1,
