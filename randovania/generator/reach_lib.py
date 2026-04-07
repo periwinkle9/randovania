@@ -100,12 +100,14 @@ def advance_after_action(previous_reach: GeneratorReach) -> GeneratorReach:
     initial_state = previous_reach.state
 
     previous_safe_nodes = previous_reach.safe_nodes_index_set
+    old_reachable_nodes = previous_reach.set_of_reachable_node_indices()
 
     for action in get_collectable_resource_nodes_of_reach(previous_reach):
         # print("Trying to collect {} and it's not dangerous. Copying...".format(action.full_name()))
         next_reach = copy.deepcopy(previous_reach)
         next_reach.act_on(action)
         collect_all_safe_resources_in_reach(next_reach)
+        middle_reachable_nodes = next_reach.set_of_reachable_node_indices()
 
         if previous_safe_nodes <= next_reach.safe_nodes_index_set:
             if _action_has_no_dangerous_resources(action, graph.dangerous_resources, initial_state.resources):
@@ -137,7 +139,14 @@ def advance_after_action(previous_reach: GeneratorReach) -> GeneratorReach:
             next_next_reach.act_on(next_action)
             collect_all_safe_resources_in_reach(next_next_reach)
 
-            if previous_safe_nodes <= next_next_reach.safe_nodes_index_set:
+            next_reachable_nodes = next_next_reach.set_of_reachable_node_indices()
+
+            if (
+                previous_safe_nodes <= next_next_reach.safe_nodes_index_set
+                and next_reach.safe_nodes_index_set <= next_next_reach.safe_nodes_index_set
+                and middle_reachable_nodes <= next_reachable_nodes
+                and old_reachable_nodes <= next_reachable_nodes
+            ):
                 if next_next_reach.is_reachable_node(initial_state.node):
                     experimental_reach = _get_reach_class().reach_from_state(
                         graph, next_next_reach.state.copy(), previous_reach.filler_config

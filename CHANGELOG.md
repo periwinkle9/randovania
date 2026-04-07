@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Generator
 
-- Changed: The check for which resources are unlocked safely after an action calculates deeper.
+- Changed: Adjusted the check for which resources are unlocked safely after an action, so it both doesn't collect some dangerous actions too early, but also calculates deeper what is is safe.
 
 ### Metroid Dread
 
