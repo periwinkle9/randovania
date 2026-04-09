@@ -165,7 +165,7 @@ class ResourceDatabase(ResourceDatabaseView):
         for reduction in self.damage_reductions.get(resource, []):
             if (
                 reduction.inventory_item is None
-                or current_resources[reduction.inventory_item] > reduction.item_quantity
+                or current_resources[reduction.inventory_item] >= reduction.item_quantity
             ):
                 damage_multiplier = min(damage_multiplier, reduction.damage_multiplier)
 
