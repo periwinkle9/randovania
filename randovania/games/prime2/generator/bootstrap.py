@@ -96,9 +96,9 @@ class EchoesBootstrap(Bootstrap[EchoesConfiguration]):
     def patch_resource_database(self, db: ResourceDatabase, configuration: EchoesConfiguration) -> ResourceDatabase:
         damage_reductions = copy.copy(db.damage_reductions)
         damage_reductions[db.get_damage("DarkWorld1")] = [
-            DamageReduction(None, configuration.varia_suit_damage / 6.0),
-            DamageReduction(db.get_item_by_display_name("Dark Suit"), configuration.dark_suit_damage / 6.0),
-            DamageReduction(db.get_item_by_display_name("Light Suit"), 0.0),
+            DamageReduction(None, 0, configuration.varia_suit_damage / 6.0),
+            DamageReduction(db.get_item_by_display_name("Dark Suit"), 1, configuration.dark_suit_damage / 6.0),
+            DamageReduction(db.get_item_by_display_name("Light Suit"), 1, 0.0),
         ]
         return dataclasses.replace(db, damage_reductions=damage_reductions)
 
