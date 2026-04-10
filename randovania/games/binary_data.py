@@ -112,6 +112,7 @@ ConstructDamageReductions = Struct(
         VarInt,
         Struct(
             name=String,
+            quantity=Int32ub,
             multiplier=Float32b,
         ),
     ),
