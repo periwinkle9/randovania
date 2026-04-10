@@ -89,6 +89,53 @@ def reach_with_all_safe_resources(
     return reach
 
 
+def _is_new_node_state_no_worse(
+    new_reach,
+    old_safe_node_sets: list[set[int]],
+    new_reachable_nodes: set[int],
+    old_reachable_node_sets: list[set[int]],
+) -> bool:
+    for old_safe_nodes in old_safe_node_sets:
+        if not old_safe_nodes <= new_reach.safe_nodes_index_set:
+            return False
+    for old_reachable_nodes in old_reachable_node_sets:
+        if not old_reachable_nodes <= new_reachable_nodes:
+            return False
+    return True
+
+
+def _check_if_action_was_safe(
+    graph,
+    initial_state,
+    previous_reach,
+    action,
+    new_reach,
+    new_reachable_nodes: set[int],
+    previous_safe_node_sets: list[set[int]],
+    old_reachable_node_sets: list[set[int]],
+) -> bool:
+    if _is_new_node_state_no_worse(new_reach, previous_safe_node_sets, new_reachable_nodes, old_reachable_node_sets):
+        if _action_has_no_dangerous_resources(action, graph.dangerous_resources, initial_state.resources):
+            return True
+
+        # It'll only be reachable in the new state if it already is in the existing state
+        # And since we already calculated the reachable nodes for this reach, this is a cheap operation!
+        if new_reach.is_reachable_node(initial_state.node):
+            # In this case, the action provides a dangerous resource but collecting it still lets us go back
+            # to where we started and the set of safe nodes didn't shrink
+            # We'll now create an entire new GeneratorReach and check if the safe nodes really didn't shrink.
+
+            # No need to call collect_all_safe_resources_in_reach on this new reach,
+            # as we've already collected everything at the start of this loop
+            experimental_reach = _get_reach_class().reach_from_state(
+                graph, new_reach.state.copy(), previous_reach.filler_config
+            )
+
+            if previous_safe_node_sets[0] <= experimental_reach.safe_nodes_index_set:
+                return True
+    return False
+
+
 def advance_after_action(previous_reach: GeneratorReach) -> GeneratorReach:
     """
     Create a new GeneratorReach that collected actions not considered safe, but expanded the safe_nodes set
@@ -107,30 +154,21 @@ def advance_after_action(previous_reach: GeneratorReach) -> GeneratorReach:
         next_reach = copy.deepcopy(previous_reach)
         next_reach.act_on(action)
         collect_all_safe_resources_in_reach(next_reach)
+        middle_safe_nodes = next_reach.safe_nodes_index_set
         middle_reachable_nodes = next_reach.set_of_reachable_node_indices()
 
-        if previous_safe_nodes <= next_reach.safe_nodes_index_set and old_reachable_nodes <= middle_reachable_nodes:
-            if _action_has_no_dangerous_resources(action, graph.dangerous_resources, initial_state.resources):
-                # print("Non-safe {} was good".format(action.full_name()))
-                return advance_after_action(next_reach)
+        if _check_if_action_was_safe(
+            graph,
+            initial_state,
+            previous_reach,
+            action,
+            next_reach,
+            middle_reachable_nodes,
+            previous_safe_node_sets=[previous_safe_nodes],
+            old_reachable_node_sets=[old_reachable_nodes],
+        ):
+            return advance_after_action(next_reach)
 
-            # It'll only be reachable in the new state if it already is in the existing state
-            # And since we already calculated the reachable nodes for this reach, this is a cheap operation!
-            if next_reach.is_reachable_node(initial_state.node):
-                # In this case, the action provides a dangerous resource but collecting it still lets us go back
-                # to where we started and the set of safe nodes didn't shrink
-                # We'll now create an entire new GeneratorReach and check if the safe nodes really didn't shrink.
-
-                # No need to call collect_all_safe_resources_in_reach on this new reach,
-                # as we've already collected everything at the start of this loop
-                experimental_reach = _get_reach_class().reach_from_state(
-                    graph, next_reach.state.copy(), previous_reach.filler_config
-                )
-                # assert experimental_reach.safe_nodes_index_set <= next_reach.safe_nodes_index_set
-
-                if previous_safe_nodes <= experimental_reach.safe_nodes_index_set:
-                    # print("Non-safe {} could reach back to where we were".format(action.full_name()))
-                    return advance_after_action(experimental_reach)
         for next_action in get_collectable_resource_nodes_of_reach(next_reach):
             # This loop is largely the same logic as above, and exists for the purpose of trying a second possibly
             # unsafe action to get an even deeper evaluation of new safe resources.
@@ -139,23 +177,19 @@ def advance_after_action(previous_reach: GeneratorReach) -> GeneratorReach:
             next_next_reach.act_on(next_action)
             collect_all_safe_resources_in_reach(next_next_reach)
 
-            next_reachable_nodes = next_next_reach.set_of_reachable_node_indices()
+            last_reachable_nodes = next_next_reach.set_of_reachable_node_indices()
 
-            if (
-                previous_safe_nodes <= next_next_reach.safe_nodes_index_set
-                and next_reach.safe_nodes_index_set <= next_next_reach.safe_nodes_index_set
-                and middle_reachable_nodes <= next_reachable_nodes
-                and old_reachable_nodes <= next_reachable_nodes
+            if _check_if_action_was_safe(
+                graph,
+                initial_state,
+                previous_reach,
+                next_action,
+                next_next_reach,
+                last_reachable_nodes,
+                previous_safe_node_sets=[previous_safe_nodes, middle_safe_nodes],
+                old_reachable_node_sets=[old_reachable_nodes, middle_reachable_nodes],
             ):
-                if next_next_reach.is_reachable_node(initial_state.node):
-                    experimental_reach = _get_reach_class().reach_from_state(
-                        graph, next_next_reach.state.copy(), previous_reach.filler_config
-                    )
-
-                    if previous_safe_nodes <= experimental_reach.safe_nodes_index_set:
-                        # print("Non-safe {} could reach back to where we were".format(action.full_name()))
-                        return advance_after_action(experimental_reach)
-        # print("Non-safe {} was skipped".format(action.full_name()))
+                return advance_after_action(next_reach)
 
     # We couldn't improve this reach, so just return it
     return previous_reach
