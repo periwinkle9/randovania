@@ -109,7 +109,7 @@ def advance_after_action(previous_reach: GeneratorReach) -> GeneratorReach:
         collect_all_safe_resources_in_reach(next_reach)
         middle_reachable_nodes = next_reach.set_of_reachable_node_indices()
 
-        if previous_safe_nodes <= next_reach.safe_nodes_index_set:
+        if previous_safe_nodes <= next_reach.safe_nodes_index_set and old_reachable_nodes <= middle_reachable_nodes:
             if _action_has_no_dangerous_resources(action, graph.dangerous_resources, initial_state.resources):
                 # print("Non-safe {} was good".format(action.full_name()))
                 return advance_after_action(next_reach)
