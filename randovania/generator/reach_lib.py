@@ -90,7 +90,7 @@ def reach_with_all_safe_resources(
 
 
 def _is_new_node_state_no_worse(
-    new_reach,
+    new_reach: GeneratorReach,
     old_safe_node_sets: list[set[int]],
     new_reachable_nodes: set[int],
     old_reachable_node_sets: list[set[int]],
@@ -105,11 +105,11 @@ def _is_new_node_state_no_worse(
 
 
 def _check_if_action_was_safe(
-    graph,
-    initial_state,
-    previous_reach,
-    action,
-    new_reach,
+    graph: WorldGraph,
+    initial_state: State,
+    previous_reach: GeneratorReach,
+    action: WorldGraphNode,
+    new_reach: GeneratorReach,
     new_reachable_nodes: set[int],
     previous_safe_node_sets: list[set[int]],
     old_reachable_node_sets: list[set[int]],
