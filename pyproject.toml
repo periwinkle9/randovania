@@ -99,7 +99,7 @@ exporters = [
     "retro-data-structures>=0.34",
 
     # Metroid Prime 2
-    "mp2hudcolor==1.0.13",
+    "mp2hudcolor==1.0.14",
 
     # Metroid: Samus Returns
     "open-samus-returns-rando==3.4.0",
