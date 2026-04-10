@@ -189,7 +189,7 @@ def advance_after_action(previous_reach: GeneratorReach) -> GeneratorReach:
                 previous_safe_node_sets=[previous_safe_nodes, middle_safe_nodes],
                 old_reachable_node_sets=[old_reachable_nodes, middle_reachable_nodes],
             ):
-                return advance_after_action(next_reach)
+                return advance_after_action(next_next_reach)
 
     # We couldn't improve this reach, so just return it
     return previous_reach
