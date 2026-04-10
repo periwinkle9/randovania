@@ -133,6 +133,11 @@
                         "multiplier": 0.5
                     },
                     {
+                        "name": "Jump",
+                        "quantity": 2,
+                        "multiplier": 0.0
+                    },
+                    {
                         "name": "DoubleJump",
                         "quantity": 1,
                         "multiplier": 0.0
