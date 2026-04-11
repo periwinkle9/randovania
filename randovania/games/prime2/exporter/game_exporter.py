@@ -6,7 +6,7 @@ import tempfile
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-import mp2hudcolor  # type: ignore[import-untyped]
+import mp2hudcolor  # type: ignore[import-not-found]
 from open_prime_rando.dol_patching.echoes import dol_patcher
 from ppc_asm import dol_file
 from retro_data_structures.asset_manager import AssetManager, PathFileProvider, PathFileWriter
