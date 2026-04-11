@@ -61,11 +61,11 @@ Extra - map_name: Brinstar/x128_y202
       Any of the following:
           # Freeze and jump off the Skree
           Hi-Jump Boots and Ice Beam
-          # https://youtu.be/2GBsMhsgyhk Freeze a Zoomer to the wall and jump off it
+          # https://youtu.be/k_WcxGatMW0 Freeze a Zoomer to the wall and jump off it
           Ice Beam and Stand On Frozen Enemies (Beginner)
           # https://youtu.be/xpj3fpkDejQ
           IBJ (Intermediate) and Can Use Bombs
-          # https://youtu.be/PM3R8Y9ZLwM
+          # https://youtu.be/xtNeqnfRrDQ
           Hi-Jump Boots and Unmorph Jump (Beginner) and Can Use Bombs
 
 > Door to Blue Tower; Heals? False
@@ -360,8 +360,8 @@ Extra - map_name: Brinstar/x472_y67
       Any of the following:
           # Freeze the rippers
           Hi-Jump Boots and Ice Beam
-          # Taking damage is likely/inevitable; https://youtu.be/CLnc2MzPPL8
-          IBJ (Advanced) and Normal Damage ≥ 50 and Can Use Bombs
+          # https://youtu.be/rnLWPTIv4sg
+          IBJ (Advanced) and Can Use Bombs
   > Door to Blue Rocks East
       Trivial
 

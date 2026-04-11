@@ -362,7 +362,7 @@
                                     {
                                         "type": "and",
                                         "data": {
-                                            "comment": "https://youtu.be/2GBsMhsgyhk Freeze a Zoomer to the wall and jump off it",
+                                            "comment": "https://youtu.be/k_WcxGatMW0 Freeze a Zoomer to the wall and jump off it",
                                             "items": [
                                                 {
                                                     "type": "resource",
@@ -409,7 +409,7 @@
                                     {
                                         "type": "and",
                                         "data": {
-                                            "comment": "https://youtu.be/PM3R8Y9ZLwM",
+                                            "comment": "https://youtu.be/xtNeqnfRrDQ",
                                             "items": [
                                                 {
                                                     "type": "template",
@@ -2058,7 +2058,7 @@
                                     {
                                         "type": "and",
                                         "data": {
-                                            "comment": "Taking damage is likely/inevitable; https://youtu.be/CLnc2MzPPL8",
+                                            "comment": "https://youtu.be/rnLWPTIv4sg",
                                             "items": [
                                                 {
                                                     "type": "template",
@@ -2070,15 +2070,6 @@
                                                         "type": "tricks",
                                                         "name": "IBJ",
                                                         "amount": 3,
-                                                        "negate": false
-                                                    }
-                                                },
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "damage",
-                                                        "name": "Damage",
-                                                        "amount": 50,
                                                         "negate": false
                                                     }
                                                 }
