@@ -40,7 +40,11 @@ Extra - entity_file: unit4_b1_Ent.bin
   > Door to Stronghold Void A (Arcterra)
       After Arcterra - Defeat Slench 2
   > Event - Slench 2
-      Judicator
+      All of the following:
+          Judicator
+          Any of the following:
+              Combat (Intermediate) or Damage ≥ 199
+              Combat (Beginner) and Damage ≥ 99
 
 ----------------
 Biodefense Chamber B (Arcterra)
@@ -84,7 +88,9 @@ Extra - entity_file: unit4_b2_Ent.bin
   > Door to Stronghold Void B (Arcterra)
       After Arcterra - Defeat Cretaphid v4
   > Event - Cretaphid v4
-      Trivial
+      Any of the following:
+          Combat (Expert) or Damage ≥ 299
+          Combat (Advanced) and Damage ≥ 199
 
 ----------------
 Frost Labyrinth
@@ -226,7 +232,7 @@ Arcterra Gateway
 Extra - room_id: 77
 Extra - entity_file: unit4_Land_Ent.bin
 Extra - portal_filename: unit4_Land_Ent
-> Ship; Heals? False; Default Node
+> Ship; Heals? True; Default Node
   * Layers: default
   * Teleporter Network (Unlocked by Trivial)
   * Extra - entity_id: 0

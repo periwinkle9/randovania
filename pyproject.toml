@@ -96,7 +96,7 @@ exporters = [
     # Metroid Prime 1/2
     "ppc-asm>=1.2.1",  # for multiworld
     "open-prime-rando==0.16.0",  # but also for echoes exporting
-    "retro-data-structures>=0.33",  # Newer versions break asset conversion and needs adjusting
+    "retro-data-structures>=0.34",
 
     # Metroid Prime 2
     "mp2hudcolor==1.0.13",
@@ -109,7 +109,7 @@ exporters = [
 ]
 
 gui = [
-    "PySide6-Essentials==6.10.2",
+    "PySide6-Essentials==6.11.0",
     "pyqtdarktheme-fork>=2.3.0",
     "markdown",
     "qasync",
@@ -148,7 +148,7 @@ server = [
     "cachetools",  # for TTLCache
 
     # discord bot
-    "py-cord>=2.3.1,<2.7",  # for randovania/discord_bot; 2.3.1+ is needed for Python 3.11, 2.7 breaks tests
+    "py-cord>=2.7.1,<2.8",  # for randovania/discord_bot; 2.3.1+ is needed for Python 3.11, 2.7 breaks tests
     "audioop-lts; python_version>='3.13'",  # for py-cord
     "Pillow>=9.0.0",  # for randovania/discord_bot/database_command
     "graphviz",  # for randovania/discord_bot/database_command
@@ -180,7 +180,7 @@ installer = [
 ]
 
 typing = [
-    "mypy<1.19.2",
+    "mypy<1.20.1",
     "types-aiofiles",
     "types-peewee<4",
     "types-qrcode>=8.0.0.20241004",

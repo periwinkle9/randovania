@@ -5,7 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [10.6.0] - 2026-04-??
+## [10.7.0] - 2026-05-??
+
+### Metroid Dread
+
+- Changed: Increased likelihood that doors that are logically challenging to reach get locks when using Individual Doors mode to randomize Door Locks.
+
+### Metroid Fusion
+
+- Added: Door Lock Randomizer is now available.
+
+## [10.6.0] - 2026-04-01
 
 - Fixed: The resolver now correctly handles damage requirements with item alternatives.
 
@@ -20,9 +30,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Metroid Fusion
 
+- Fixed: The credits text for random starting items now appears correctly.
+
 #### Logic Database
 
 - Changed: Blue-X Damage has been separated from Cold Damage.
+- Changed: Acid Damage has been separated from Normal Damage.
+
+##### Sector 1 (SRX)
+
+- Update Ripper Sauna to use Acid Damage.
 
 ##### Sector 6 (NOC)
 
