@@ -185,7 +185,7 @@ class HuntersPatchDataFactory(PatchDataFactory[HuntersConfiguration, HuntersCosm
                 area_name = area.name
                 # Remove region name from room name
                 if area_name.startswith(("Biodefense Chamber", "Stronghold Void")):
-                    area_name = area_name[:20]
+                    area_name, _ = area_name.split(" (")
                 level_data[region.name]["levels"][area_name] = {
                     "pickups": self._get_pickups_for_area(area),
                     "force_fields": self._get_force_fields_for_area(area, self.patches.game_specific["force_fields"]),

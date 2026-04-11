@@ -15,7 +15,9 @@ if TYPE_CHECKING:
 @pytest.mark.parametrize("patch_data_name", ["starter_preset"])
 def test_export_game(test_files_dir, mocker, patch_data_name: str, tmp_path):
     # Setup
-    def validate_schema(input_path: Path, output_path: Path, configuration: dict, status_update):
+    def validate_schema(
+        input_path: Path, output_path: Path, configuration: dict, export_parsed_files: bool, status_update
+    ):
         open_prime_hunters_rando.prime_hunters_patcher.validate(configuration)
         status_update(1.0, "Finished")
 
@@ -44,6 +46,7 @@ def test_export_game(test_files_dir, mocker, patch_data_name: str, tmp_path):
         tmp_path.joinpath("input_file.nds"),
         tmp_path.joinpath("output", "path"),
         ANY,
+        False,
         ANY,
     )
     progress_update.assert_called_once_with("Finished", 1.0)

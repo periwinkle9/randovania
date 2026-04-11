@@ -71,6 +71,7 @@ class HuntersGameExporter(GameExporter[HuntersGameExportParams]):
                 export_params.input_file,
                 export_params.output_path,
                 patch_data,
+                False,
                 lambda progress, msg: patcher_update(msg, progress),
             )
 

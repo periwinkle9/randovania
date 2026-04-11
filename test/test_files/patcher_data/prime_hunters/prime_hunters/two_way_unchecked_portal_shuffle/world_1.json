@@ -399,7 +399,7 @@
                         }
                     ]
                 },
-                "Stronghold Void A (C": {
+                "Stronghold Void A": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -410,7 +410,7 @@
                         }
                     ]
                 },
-                "Stronghold Void B (C": {
+                "Stronghold Void B": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -703,7 +703,7 @@
                         }
                     ]
                 },
-                "Stronghold Void B (A": {
+                "Stronghold Void B": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -714,7 +714,7 @@
                         }
                     ]
                 },
-                "Stronghold Void A (A": {
+                "Stronghold Void A": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -941,7 +941,7 @@
                         }
                     ]
                 },
-                "Stronghold Void A (A": {
+                "Stronghold Void A": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -952,7 +952,7 @@
                         }
                     ]
                 },
-                "Stronghold Void B (A": {
+                "Stronghold Void B": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -1151,7 +1151,7 @@
                         }
                     ]
                 },
-                "Stronghold Void A (V": {
+                "Stronghold Void A": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -1162,7 +1162,7 @@
                         }
                     ]
                 },
-                "Stronghold Void B (V": {
+                "Stronghold Void B": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [

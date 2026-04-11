@@ -1814,7 +1814,7 @@ wheels = [
 
 [[package]]
 name = "open-prime-hunters-rando"
-version = "0.3.0"
+version = "0.3.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "construct" },
@@ -1823,9 +1823,9 @@ dependencies = [
     { name = "ndspy" },
     { name = "types-jsonschema" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3f/d1/a9d280bf1fe774c864da044c4612ab7ba6ec5179235488777ad5d0039f9b/open_prime_hunters_rando-0.3.0.tar.gz", hash = "sha256:e6d66df886f736f427467447927a08e7b077904a83796b9b9ad25c50b2e26e65", size = 100165, upload-time = "2026-04-08T22:12:23.689Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/6a/e5/27cd13fe16a9dd8ecb7d171165378fda2f029b855397eef6c4003cc5d66a/open_prime_hunters_rando-0.3.2.tar.gz", hash = "sha256:81849b92d5d6707376ead05a01e491a20ea265dcec3af970326b7824f5690b24", size = 100167, upload-time = "2026-04-11T12:25:47.347Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/18/23/5c2394488103487b192c8cc2ed36d0237dcaa3d3db7dfe2a44c930c7ad7f/open_prime_hunters_rando-0.3.0-py3-none-any.whl", hash = "sha256:a0de532ab3f4d3fab1d1bac2f0b986447e60eded72d656abc83fca22e00ec455", size = 83441, upload-time = "2026-04-08T22:12:22.44Z" },
+    { url = "https://files.pythonhosted.org/packages/f0/a1/ef7378d2f838124106b945a4bec2edc36bf00fbb201d0a7df48f6eb309b1/open_prime_hunters_rando-0.3.2-py3-none-any.whl", hash = "sha256:5c71cc33bd4943d544f86b2b2b8e4e75298e3c094c061293de0e089f1da79316", size = 83471, upload-time = "2026-04-11T12:25:46.246Z" },
 ]
 
 [[package]]
@@ -2919,7 +2919,7 @@ requires-dist = [
     { name = "nod", marker = "extra == 'gui'", specifier = ">=1.9" },
     { name = "oauthlib", marker = "extra == 'server'" },
     { name = "open-dread-rando", marker = "extra == 'exporters'", specifier = "==2.19.0" },
-    { name = "open-prime-hunters-rando", marker = "extra == 'exporters'", specifier = "==0.3.0" },
+    { name = "open-prime-hunters-rando", marker = "extra == 'exporters'", specifier = "==0.3.2" },
     { name = "open-prime-rando", marker = "extra == 'exporters'", specifier = "==0.16.0" },
     { name = "open-samus-returns-rando", marker = "extra == 'exporters'", specifier = "==3.4.0" },
     { name = "packaging" },

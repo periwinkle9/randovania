@@ -146,5 +146,6 @@ class HuntersGameExportDialog(GameExportDialog[HuntersConfiguration], Ui_Hunters
         return HuntersGameExportParams(
             spoiler_output=spoiler_output,
             input_file=self.input_file,
-            output_file=self.output_file,
+            output_path=self.output_file,
+            post_export=None,
         )
