@@ -6672,8 +6672,26 @@
                                                                                                 {
                                                                                                     "type": "resource",
                                                                                                     "data": {
+                                                                                                        "type": "tricks",
+                                                                                                        "name": "Knowledge",
+                                                                                                        "amount": 3,
+                                                                                                        "negate": false
+                                                                                                    }
+                                                                                                },
+                                                                                                {
+                                                                                                    "type": "resource",
+                                                                                                    "data": {
+                                                                                                        "type": "tricks",
+                                                                                                        "name": "Movement",
+                                                                                                        "amount": 1,
+                                                                                                        "negate": false
+                                                                                                    }
+                                                                                                },
+                                                                                                {
+                                                                                                    "type": "resource",
+                                                                                                    "data": {
                                                                                                         "type": "items",
-                                                                                                        "name": "WaveBeam",
+                                                                                                        "name": "ScrewAttack",
                                                                                                         "amount": 1,
                                                                                                         "negate": false
                                                                                                     }
