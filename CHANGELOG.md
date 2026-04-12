@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ##### Sector 6 (NOC)
 
-- Added: X-B.O.X. Garage: The passage to the upper check can now logically be opened with Power Bombs.
+- Added: X-B.O.X. Garage: Knowledge (Advanced) + Movement (Beginner) method to grab the upper item using power bombs without killing the Owtch.
 
 ## [10.6.0] - 2026-04-01
 
