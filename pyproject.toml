@@ -66,6 +66,7 @@ dependencies = [
     "certifi",
     # speedup GraphRequirement
     "cython",
+    "setuptools>=64",
 ]
 
 [project.optional-dependencies]
