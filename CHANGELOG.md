@@ -15,6 +15,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added: Door Lock Randomizer is now available.
 
+#### Logic Database
+
+##### Sector 6 (NOC)
+
+- Added: X-B.O.X. Garage: Knowledge (Advanced) + Movement (Beginner) method to grab the upper item using power bombs without killing the Owtch.
+
 ## [10.6.0] - 2026-04-01
 
 - Fixed: The resolver now correctly handles damage requirements with item alternatives.
