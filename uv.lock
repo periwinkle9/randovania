@@ -1518,13 +1518,13 @@ wheels = [
 
 [[package]]
 name = "mp2hudcolor"
-version = "1.0.13"
+version = "1.0.14"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/ca/27/4d9d0aa586a2bf59198d92c80a197438c09a5744fe14a243c4ed94a661eb/mp2hudcolor-1.0.13.tar.gz", hash = "sha256:4848110e9b3e220ff9834f8de2f6f2c64ac87d1b6f2f6eea64d8687ef27aa81f", size = 47942, upload-time = "2024-03-18T18:22:19.216Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/57/5c/ef1cb59aa4c89c2e033cf8c3d436b64e24c1158b5e3814c5004410a48ee2/mp2hudcolor-1.0.14.tar.gz", hash = "sha256:de35bdbe968d0b27b49c279b08347bc969967708fa7606815c34c41dfa432da9", size = 61634, upload-time = "2026-03-29T22:58:18.989Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/90/e5/095c9ca00a234aa987d96d91e2e7476771fa9e6c25c2cf9b3219faa49c77/mp2hudcolor-1.0.13-cp312-cp312-macosx_10_9_universal2.whl", hash = "sha256:a5ece1caad864b4fc36222fcaec5708d3d90293de94e412987f3b87a6f6eaed0", size = 40906, upload-time = "2024-03-18T18:22:05.687Z" },
-    { url = "https://files.pythonhosted.org/packages/75/5f/f8891b2cb9148a33b15764782bf64d48fcf82531ddd6e560e0b6b8c7b9fd/mp2hudcolor-1.0.13-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f5af738bbe1a57d110c83bac69f0ebf718f41fd8c2d755d899a244f9296f2ac3", size = 101816, upload-time = "2024-03-18T18:22:07.497Z" },
-    { url = "https://files.pythonhosted.org/packages/88/a9/07f6facb0ad09e71441cc8793336d24ee0f97ace90b83431215aef482215/mp2hudcolor-1.0.13-cp312-cp312-win_amd64.whl", hash = "sha256:a90310cbfc343d540c2b5e52d72964e50f35379852c388e7e429a29350884016", size = 24912, upload-time = "2024-03-18T18:22:08.73Z" },
+    { url = "https://files.pythonhosted.org/packages/ca/53/574853300b2820b4d0082fc36906dafac41e51fc48cff05667aca0d23e03/mp2hudcolor-1.0.14-cp310-abi3-macosx_10_9_universal2.whl", hash = "sha256:e6331e144d647faf2ae0d18ce5a0c07776ce3c3dc841e6f34f9d7fb4b6e59353", size = 39029, upload-time = "2026-03-29T22:58:16.197Z" },
+    { url = "https://files.pythonhosted.org/packages/fc/aa/1e2f264201da4bda7fc7037fa7421bb867b2be6e737bf1ec7a634d875c61/mp2hudcolor-1.0.14-cp310-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:4929c65e47b2ffb06ae55eef5d37d3e16606b0b8f905ebad58438479932a008f", size = 75291, upload-time = "2026-03-29T22:58:17.268Z" },
+    { url = "https://files.pythonhosted.org/packages/53/df/0bd67aba1a8cfc329fe765163126b369c49218af18060d3d53c8b3300683/mp2hudcolor-1.0.14-cp310-abi3-win_amd64.whl", hash = "sha256:010d11c387211a877caea7c756f0fb067bace9de98a5ec7613b9ef0ac0078c49", size = 21601, upload-time = "2026-03-29T22:58:18.029Z" },
 ]
 
 [[package]]
@@ -2895,7 +2895,7 @@ requires-dist = [
     { name = "markdown", marker = "extra == 'gui'" },
     { name = "mars-patcher", marker = "extra == 'exporters'", specifier = "==0.12.0" },
     { name = "matplotlib", marker = "extra == 'gui'", specifier = ">=3.6.2" },
-    { name = "mp2hudcolor", marker = "extra == 'exporters'", specifier = "==1.0.13" },
+    { name = "mp2hudcolor", marker = "extra == 'exporters'", specifier = "==1.0.14" },
     { name = "natsort", marker = "extra == 'gui'" },
     { name = "networkx" },
     { name = "nod", marker = "extra == 'gui'", specifier = ">=1.9" },
