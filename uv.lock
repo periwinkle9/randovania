@@ -1141,16 +1141,18 @@ wheels = [
 ]
 
 [[package]]
-name = "keystone-engine"
-version = "0.9.2"
+name = "keystone-engine-rdv"
+version = "0.9.3"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/0a/65/3a2e7e55cc1db188869bbbacee60036828330e0ce57fc5f05a3167ab4b4d/keystone-engine-0.9.2.tar.gz", hash = "sha256:2f7af62dab0ce6c2732dbb4f31cfa2184a8a149e280b96b92ebc0db84c6e50f5", size = 2813059, upload-time = "2020-06-21T14:13:59.951Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ac/dc/e8c97b9b10cdb4e4ba36dae4f3fdc8e68fecb98a40a3d0105f75ee07a1f0/keystone-engine-rdv-0.9.3.tar.gz", hash = "sha256:4b9198d2e8c8098acc7ec7fdd922d957ee2d0a5fd8d7652cb876442358f153e2", size = 2817146, upload-time = "2022-08-04T23:56:01.902Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/1c/ad/a609493a534049cae43660689b2c5908117746e238f12dc76619d68a223a/keystone_engine-0.9.2-py2.py3-none-macosx_10_14_x86_64.whl", hash = "sha256:dafcc3d9450c239cbc54148855b79c4b387777099c6d054005c835768cf955f2", size = 2950758, upload-time = "2020-06-21T14:13:53.225Z" },
-    { url = "https://files.pythonhosted.org/packages/0b/cf/b8eb6956565e91a9a003b1c612765cfe007a1d0b1c6e667dc569ea519f51/keystone_engine-0.9.2-py2.py3-none-manylinux1_i686.whl", hash = "sha256:9e04dea5a2b50509b7b707abdb395de42772c40faa36131ea94482fba8dd5d9f", size = 1785427, upload-time = "2020-06-21T14:13:54.624Z" },
-    { url = "https://files.pythonhosted.org/packages/01/5c/40ffbec589262f49ff7c463d96ff0bfab0fbd98d9d869c370a70853a13fb/keystone_engine-0.9.2-py2.py3-none-manylinux1_x86_64.whl", hash = "sha256:5a5316a34323620b1bba31dcfe9e4b4ca6f0c030e82fc7a151da7c8fbe81a379", size = 1766182, upload-time = "2020-06-21T14:13:55.817Z" },
-    { url = "https://files.pythonhosted.org/packages/88/b9/a9d8b6837346b86bcdda56e5c3fe4ac51f98f4ed40bf71fb6bd8605516da/keystone_engine-0.9.2-py2.py3-none-win32.whl", hash = "sha256:9f81e480904a405ef008f1d9f0e4a05e37d2bd83c5218a27136e1a294b02c1f6", size = 1318239, upload-time = "2020-06-21T14:13:57.122Z" },
-    { url = "https://files.pythonhosted.org/packages/a4/8d/58471cb026de45397b29ba4b37ae3e20b434fae14c4b92fd3e9771a7bac8/keystone_engine-0.9.2-py2.py3-none-win_amd64.whl", hash = "sha256:c91db1ff16d9d094e00d1827107d1b4afd5e63ce19b491a0140e660635000e8b", size = 1370823, upload-time = "2020-06-21T14:13:58.476Z" },
+    { url = "https://files.pythonhosted.org/packages/c7/ed/ad862e9c8988c1180e13b4e216ebb30355a784de80a3202cee8fefdc04fd/keystone_engine_rdv-0.9.3-py2.py3-none-macosx_10_15_x86_64.whl", hash = "sha256:daa1efcbccdb3f6c877f923b7fcec174896fa4563714b6d6e30182ac20351206", size = 2922060, upload-time = "2022-08-04T23:55:51.401Z" },
+    { url = "https://files.pythonhosted.org/packages/34/21/952c7ce538abcfa7b96e6c3ce89ae43e1b140a1b04d3773a1613947be517/keystone_engine_rdv-0.9.3-py2.py3-none-manylinux1_i686.manylinux_2_5_i686.whl", hash = "sha256:b3e3b5f7f27488c4e92097baf2efaf9076db85dd18def2853733a82e2b2ad3a5", size = 1785638, upload-time = "2022-08-04T23:55:53.692Z" },
+    { url = "https://files.pythonhosted.org/packages/d7/e8/3df12c32808a4cda8f39b7b16970224b0522abd7c6dd42db5863a9e4ea0b/keystone_engine_rdv-0.9.3-py2.py3-none-manylinux1_i686.whl", hash = "sha256:91b29120d0637a793149abf090907764bdacd4b4a0ca141e49421ac536f90f89", size = 1785617, upload-time = "2022-08-04T23:55:55.026Z" },
+    { url = "https://files.pythonhosted.org/packages/a8/48/4f0404816becfe6c9eff2baf8655f997f0fe72fd2171e0016b86d8df928b/keystone_engine_rdv-0.9.3-py2.py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:e9d9ae97f3fa2a3937a4a358dfb41fc2085cfb2426f8b632990178d40f20f90f", size = 1766191, upload-time = "2022-08-04T23:55:56.254Z" },
+    { url = "https://files.pythonhosted.org/packages/b9/36/8402eea3351b90f35982c89aec4d3b08828c6a5e88f24264251603a79cb0/keystone_engine_rdv-0.9.3-py2.py3-none-manylinux1_x86_64.whl", hash = "sha256:6b22bc6cfa5aae92d557bfa4b057594d77c09bc853e1d31b5752b1383ab06a00", size = 1766163, upload-time = "2022-08-04T23:55:58.042Z" },
+    { url = "https://files.pythonhosted.org/packages/63/24/c8cd411755f7d2d1a1b460ba63d000e1900af72d4e40b4aefaa271e91f80/keystone_engine_rdv-0.9.3-py2.py3-none-win32.whl", hash = "sha256:f4fd209a13fa68e762a5c6d3dc158fd79fe0c8e22c4dea2424c2c1cb5a1223ba", size = 1316667, upload-time = "2022-08-04T23:55:59.194Z" },
+    { url = "https://files.pythonhosted.org/packages/67/dc/e238188110499c0e8dcec2bd7ce8941afa36f0a6715bd430764cb7436975/keystone_engine_rdv-0.9.3-py2.py3-none-win_amd64.whl", hash = "sha256:36e21eb28c518ab0e5f9f4d79748f1c488cade825dd3785793edfc67f3081a8d", size = 1383765, upload-time = "2022-08-04T23:56:00.436Z" },
 ]
 
 [[package]]
@@ -1814,18 +1816,18 @@ wheels = [
 
 [[package]]
 name = "open-prime-hunters-rando"
-version = "0.4.1"
+version = "0.4.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "construct" },
     { name = "jsonschema" },
-    { name = "keystone-engine" },
+    { name = "keystone-engine-rdv" },
     { name = "ndspy" },
     { name = "types-jsonschema" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/4a/e5/1729f6731da7366e622bfbcf94c9352f1e24cc05a81e702d1e5555480a44/open_prime_hunters_rando-0.4.1.tar.gz", hash = "sha256:2b890e5fcce25b2cf56c2c6e7f1c8766c77e95217ba4d549ba7196e4a6b494ee", size = 100725, upload-time = "2026-04-12T13:54:46.592Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f5/67/6b0a92fb6532c1255556efce5b497fd55747f2001c76492d5b3689c0833d/open_prime_hunters_rando-0.4.2.tar.gz", hash = "sha256:6c02f409a13a96c5d981d1fa605aaebb68aa8b2d12f2b550513207ba66acfb16", size = 100936, upload-time = "2026-04-12T15:13:01.452Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/7f/3d/3a1ac49d9f2fd2448274053afcb8589cf23857b3570d1a7016350b3b3f0b/open_prime_hunters_rando-0.4.1-py3-none-any.whl", hash = "sha256:637ef818380f12a718913684be6f6b46592ee2dd616304b7d817881b78c1cb49", size = 84582, upload-time = "2026-04-12T13:54:45.001Z" },
+    { url = "https://files.pythonhosted.org/packages/bf/7b/4f7efdfec2c3bc935dd0fedea6ff7ee6f2d1c877cb20c6d4c6b903ae6ef4/open_prime_hunters_rando-0.4.2-py3-none-any.whl", hash = "sha256:aca2a8356d60a77eb1e7044412e93988148047c300b28453140fee859d454406", size = 84585, upload-time = "2026-04-12T15:13:00.042Z" },
 ]
 
 [[package]]
@@ -2920,7 +2922,7 @@ requires-dist = [
     { name = "nod", marker = "extra == 'gui'", specifier = ">=1.9" },
     { name = "oauthlib", marker = "extra == 'server'" },
     { name = "open-dread-rando", marker = "extra == 'exporters'", specifier = "==2.19.0" },
-    { name = "open-prime-hunters-rando", marker = "extra == 'exporters'", specifier = "==0.4.1" },
+    { name = "open-prime-hunters-rando", marker = "extra == 'exporters'", specifier = "==0.4.2" },
     { name = "open-prime-rando", marker = "extra == 'exporters'", specifier = "==0.16.0" },
     { name = "open-samus-returns-rando", marker = "extra == 'exporters'", specifier = "==3.4.0" },
     { name = "packaging" },
