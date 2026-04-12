@@ -28,8 +28,8 @@ if TYPE_CHECKING:
 EXPECTED_MD5_HASHES: list[str] = [
     "b4c8a9398866b49c7be17d75736a223b",  # USA
     "d6ac284bc69a8a2119fd9057743b6d89",  # Europe
-    "42850a19d7be2ee5e067df6984aa900e",  # Japan
-    "4f04529f79564020a56e187b8f9865c3",  # Korea
+    # "42850a19d7be2ee5e067df6984aa900e",  # Japan
+    # "4f04529f79564020a56e187b8f9865c3",  # Korea
 ]
 
 
@@ -147,5 +147,4 @@ class HuntersGameExportDialog(GameExportDialog[HuntersConfiguration], Ui_Hunters
             spoiler_output=spoiler_output,
             input_file=self.input_file,
             output_path=self.output_file,
-            post_export=None,
         )

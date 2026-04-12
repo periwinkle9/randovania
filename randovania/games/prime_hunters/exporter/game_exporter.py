@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import dataclasses
-from collections.abc import Callable
 from pathlib import Path
 from typing import TYPE_CHECKING
 
@@ -17,7 +16,6 @@ if TYPE_CHECKING:
 class HuntersGameExportParams(GameExportParams):
     input_file: Path
     output_path: Path
-    post_export: Callable[[status_update_lib.ProgressUpdateCallable], None] | None
 
 
 class HuntersGameExporter(GameExporter[HuntersGameExportParams]):
@@ -58,12 +56,6 @@ class HuntersGameExporter(GameExporter[HuntersGameExportParams]):
             "<version>", f"{open_prime_hunters_rando_version}"
         )
 
-        patcher_update: status_update_lib.ProgressUpdateCallable
-        if export_params.post_export is not None:
-            patcher_update = status_update_lib.OffsetProgressUpdate(progress_update, 0, 0.75)
-        else:
-            patcher_update = progress_update
-
         with monitoring.trace_block("open_prime_hunters_rando.patch_with_status_update"):
             import open_prime_hunters_rando
 
@@ -72,8 +64,5 @@ class HuntersGameExporter(GameExporter[HuntersGameExportParams]):
                 export_params.output_path,
                 patch_data,
                 False,
-                lambda progress, msg: patcher_update(msg, progress),
+                lambda progress, msg: progress_update(msg, progress),
             )
-
-        if export_params.post_export is not None:
-            export_params.post_export(status_update_lib.OffsetProgressUpdate(progress_update, 0.75, 0.25))

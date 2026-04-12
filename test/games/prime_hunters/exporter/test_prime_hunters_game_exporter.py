@@ -34,7 +34,6 @@ def test_export_game(test_files_dir, mocker, patch_data_name: str, tmp_path):
         spoiler_output=None,
         input_file=tmp_path.joinpath("input_file.nds"),
         output_path=tmp_path.joinpath("output", "path"),
-        post_export=None,
     )
     progress_update = MagicMock()
 
