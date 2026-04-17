@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Metroid Fusion
 
 - Added: Door Lock Randomizer is now available.
+- Fixed: Low-Health alarm now plays correctly when using the alternative Health Display.
+- Fixed: HUD no longer disappears after saving the animals (again).
 
 #### Logic Database
 
