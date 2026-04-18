@@ -397,7 +397,7 @@
                         }
                     ]
                 },
-                "Stronghold Void A (C": {
+                "Stronghold Void A": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -408,7 +408,7 @@
                         }
                     ]
                 },
-                "Stronghold Void B (C": {
+                "Stronghold Void B": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -702,7 +702,7 @@
                         }
                     ]
                 },
-                "Stronghold Void B (A": {
+                "Stronghold Void B": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -713,7 +713,7 @@
                         }
                     ]
                 },
-                "Stronghold Void A (A": {
+                "Stronghold Void A": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -939,7 +939,7 @@
                         }
                     ]
                 },
-                "Stronghold Void A (A": {
+                "Stronghold Void A": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -950,7 +950,7 @@
                         }
                     ]
                 },
-                "Stronghold Void B (A": {
+                "Stronghold Void B": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -1147,7 +1147,7 @@
                         }
                     ]
                 },
-                "Stronghold Void A (V": {
+                "Stronghold Void A": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -1158,7 +1158,7 @@
                         }
                     ]
                 },
-                "Stronghold Void B (V": {
+                "Stronghold Void B": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -1224,6 +1224,14 @@
             }
         }
     },
+    "ammo_sizes": {
+        "missile_launcher": 5,
+        "missile_expansion": 10,
+        "ua_expansion": 30
+    },
+    "game_patches": {
+        "shuffle_hunter_colors": false
+    },
     "string_tables": {
         "scan_log": {
             "904L": "OCTOLITH HINTS 01\\OCTOLITH 1 is located in ALINOS. OCTOLITH 2 is located in CELESTIAL ARCHIVES.",
@@ -1232,8 +1240,11 @@
             "214L": "OCTOLITH HINTS 04\\Don't forget that you can always get help if you are struggling."
         }
     },
+    "text_patches": {
+        "patcher_version": "<version>"
+    },
     "_randovania_meta": {
-        "layout_was_user_modified": true,
+        "layout_was_user_modified": false,
         "in_race_setting": false
     }
 }
