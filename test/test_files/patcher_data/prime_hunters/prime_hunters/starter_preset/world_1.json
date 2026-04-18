@@ -502,12 +502,12 @@
                     "force_fields": [],
                     "portals": [
                         {
-                            "entity_id": 28,
+                            "entity_id": 29,
                             "target_index": 11,
                             "entity_filename": "unit1_RM1_Ent"
                         },
                         {
-                            "entity_id": 29,
+                            "entity_id": 28,
                             "target_index": 10,
                             "entity_filename": "unit1_RM1_Ent"
                         }
@@ -589,12 +589,12 @@
                     "portals": [
                         {
                             "entity_id": 57,
-                            "target_index": 11,
+                            "target_index": 10,
                             "entity_filename": "unit1_C4_Ent"
                         },
                         {
                             "entity_id": 58,
-                            "target_index": 10,
+                            "target_index": 11,
                             "entity_filename": "unit1_C4_Ent"
                         }
                     ]
