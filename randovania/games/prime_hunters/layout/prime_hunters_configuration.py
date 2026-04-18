@@ -21,9 +21,9 @@ class HuntersConfiguration(BaseConfiguration):
     octoliths: HuntersOctolithConfig
     force_field_configuration: ForceFieldConfiguration
     teleporters: TeleporterConfiguration
-    missile_launcher_ammo: int = dataclasses.field(metadata={"min": 1, "max": 99, "precision": 1})
-    missile_expansion_ammo: int = dataclasses.field(metadata={"min": 1, "max": 99, "precision": 1})
-    ua_expansion_ammo: int = dataclasses.field(metadata={"min": 10, "max": 100, "precision": 10})
+    missile_launcher_ammo: int = dataclasses.field(metadata={"min": 1, "max": 1000, "precision": 1})
+    missile_expansion_ammo: int = dataclasses.field(metadata={"min": 2, "max": 1000, "precision": 2})
+    ua_expansion_ammo: int = dataclasses.field(metadata={"min": 2, "max": 1000, "precision": 2})
 
     @classmethod
     def game_enum(cls) -> RandovaniaGame:

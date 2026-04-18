@@ -1688,6 +1688,15 @@ wheels = [
 ]
 
 [[package]]
+name = "ndspy"
+version = "4.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/cd/9e/f793c0dfa05430cf4a873a9ac7ed2299b767288154ecdac2d6159b548775/ndspy-4.2.0.tar.gz", hash = "sha256:f43529628894d202c9c036582cceee18736e83bf1593db34ef6117a163e0054d", size = 115537, upload-time = "2024-09-14T02:36:22.372Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/07/01/c60b57a0aa66074552acbbc16786b34c93caa72f3fdda64fada11866482a/ndspy-4.2.0-py3-none-any.whl", hash = "sha256:d3b03e57ef5ba450e766035e1908293f7a6ba1a738736fae42b2c66952abb85b", size = 139822, upload-time = "2024-09-14T02:36:20.611Z" },
+]
+
+[[package]]
 name = "networkx"
 version = "3.6.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1808,6 +1817,21 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/43/d7/beca22eb7f03dbc7176b56af6fefdf60fa4faf64d9dfe4d41be8f5f62bdb/open_dread_rando_exlaunch-1.2.0.tar.gz", hash = "sha256:b924d67c99a5614367229822d20865b8c883640c8c8e8cbd2a1a4d6c9a57cdc2", size = 390758, upload-time = "2026-02-18T22:42:08.961Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d8/4c/5b62c550c1917b80a4409923aba426899201e9a56fcf6d9ea859519cc97d/open_dread_rando_exlaunch-1.2.0-py3-none-any.whl", hash = "sha256:d6b212c170b53d2a0606ef85eaaa32fb5989e41a74ace881b8fa6a59ef49f8ea", size = 165584, upload-time = "2026-02-18T22:42:07.006Z" },
+]
+
+[[package]]
+name = "open-prime-hunters-rando"
+version = "0.5.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "construct" },
+    { name = "jsonschema" },
+    { name = "ndspy" },
+    { name = "types-jsonschema" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ee/5d/48cb9d6783a558c745c2d6cc019a15499f47f1e480b21eef87517403b210/open_prime_hunters_rando-0.5.0.tar.gz", hash = "sha256:e6a40d0d7ebcc5c103e94ce5851644812db6acbb9fcd57a7ccb6b52612ad23b1", size = 103171, upload-time = "2026-04-18T13:57:14.913Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/88/34/0db14c520ac9eab1ac74ac7b5743211e4a34d1e43fbfe35243f53d386adf/open_prime_hunters_rando-0.5.0-py3-none-any.whl", hash = "sha256:3d6844eda20f0067a87c7ef52552c85f67071b3c9035aec86b18ddedac57649b", size = 84482, upload-time = "2026-04-18T13:57:13.702Z" },
 ]
 
 [[package]]
@@ -2788,6 +2812,7 @@ exporters = [
     { name = "mars-patcher" },
     { name = "mp2hudcolor" },
     { name = "open-dread-rando" },
+    { name = "open-prime-hunters-rando" },
     { name = "open-prime-rando" },
     { name = "open-samus-returns-rando" },
     { name = "planets-yapr" },
@@ -2902,6 +2927,7 @@ requires-dist = [
     { name = "nod", marker = "extra == 'gui'", specifier = ">=1.9" },
     { name = "oauthlib", marker = "extra == 'server'" },
     { name = "open-dread-rando", marker = "extra == 'exporters'", specifier = "==2.19.0" },
+    { name = "open-prime-hunters-rando", marker = "extra == 'exporters'", specifier = "==0.5.0" },
     { name = "open-prime-rando", marker = "extra == 'exporters'", specifier = "==0.16.0" },
     { name = "open-samus-returns-rando", marker = "extra == 'exporters'", specifier = "==3.4.0" },
     { name = "packaging" },
@@ -3260,6 +3286,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/8b/7f/16a4d8344c28193a5a74358028c2d2f753f0d9658dd98b9e1967c50045a2/types_cachetools-6.2.0.20260317.tar.gz", hash = "sha256:6d91855bcc944665897c125e720aa3c80aace929b77a64e796343701df4f61c6", size = 9812, upload-time = "2026-03-17T04:06:32.007Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/17/9a/b00b23054934c4d569c19f7278c4fb32746cd36a64a175a216d3073a4713/types_cachetools-6.2.0.20260317-py3-none-any.whl", hash = "sha256:92fa9bc50e4629e31fca67ceb3fb1de71791e314fa16c0a0d2728724dc222c8b", size = 9346, upload-time = "2026-03-17T04:06:31.184Z" },
+]
+
+[[package]]
+name = "types-jsonschema"
+version = "4.26.0.20260408"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "referencing" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/9f/4c/2ef5483ef81e7b6e1b901eb2994fd280cb19860134a20ff99e72748f3ccb/types_jsonschema-4.26.0.20260408.tar.gz", hash = "sha256:82b75a976ed1507c473b8dee2d4841bd65926758c6d672bb93d08bf5e16f1b3f", size = 16553, upload-time = "2026-04-08T04:36:00.543Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/12/3c/724ad6ecaea06e8c6c8a8c9949a0979e6a2149b8aec4fe160135c64dd5ac/types_jsonschema-4.26.0.20260408-py3-none-any.whl", hash = "sha256:1ab0058c2612b0b81fc4e3c88ec3f9ad9b0af3fd31a176030d78b6d6cefb6e7b", size = 16081, upload-time = "2026-04-08T04:35:59.678Z" },
 ]
 
 [[package]]

@@ -66,7 +66,6 @@ dependencies = [
     "certifi",
     # speedup GraphRequirement
     "cython",
-    "setuptools>=64",
 ]
 
 [project.optional-dependencies]
@@ -103,7 +102,7 @@ exporters = [
     "mp2hudcolor==1.0.14",
 
     # Metroid Prime Hunters
-    "open-prime-hunters-rando==0.4.2",
+    "open-prime-hunters-rando==0.5.0",
 
     # Metroid: Samus Returns
     "open-samus-returns-rando==3.4.0",
