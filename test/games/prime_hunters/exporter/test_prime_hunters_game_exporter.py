@@ -12,7 +12,10 @@ if TYPE_CHECKING:
     from pathlib import Path
 
 
-@pytest.mark.parametrize("patch_data_name", ["starter_preset"])
+@pytest.mark.parametrize(
+    "patch_data_name",
+    ["starter_preset", "shuffled_force_fields", "starting_items_with_nothings", "two_way_unchecked_portal_shuffle"],
+)
 def test_export_game(test_files_dir, mocker, patch_data_name: str, tmp_path):
     # Setup
     def validate_schema(
