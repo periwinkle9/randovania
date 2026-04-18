@@ -79,7 +79,7 @@ class HuntersGameExportDialog(GameExportDialog[HuntersConfiguration], Ui_Hunters
         hunters_options = options.per_game_options(HuntersPerGameOptions)
 
         # Input
-        self.input_path_button.clicked.connect(self._on_input_path_button)
+        self.input_file_button.clicked.connect(self._on_input_file_button)
 
         # Output
         self.output_file_button.clicked.connect(self._on_output_file_button)
@@ -116,7 +116,7 @@ class HuntersGameExportDialog(GameExportDialog[HuntersConfiguration], Ui_Hunters
         return self.auto_save_spoiler_check.isChecked()
 
     # Input file
-    def _on_input_path_button(self) -> None:
+    def _on_input_file_button(self) -> None:
         input_file = prompt_for_input_file(self, self.input_file_edit, [self.valid_file_type])
         if input_file is not None:
             self.input_file_edit.setText(str(input_file.absolute()))
