@@ -84,14 +84,14 @@ exporters = [
     "open-dread-rando==2.19.0",
 
     # Metroid Fusion
-    "mars-patcher==0.12.0",
+    "mars-patcher==0.13.0",
 
     # Metroid Planets
     "planets-yapr==1.0.2",
 
     # Metroid Prime 1
     "py_randomprime==1.30.4",
-    "random-enemy-attributes==1.0.4.3",
+    "random-enemy-attributes==1.0.9",
 
     # Metroid Prime 1/2
     "ppc-asm>=1.2.1",  # for multiworld
@@ -99,7 +99,10 @@ exporters = [
     "retro-data-structures>=0.34",
 
     # Metroid Prime 2
-    "mp2hudcolor==1.0.13",
+    "mp2hudcolor==1.0.14",
+
+    # Metroid Prime Hunters
+    "open-prime-hunters-rando==0.5.0",
 
     # Metroid: Samus Returns
     "open-samus-returns-rando==3.4.0",
@@ -155,7 +158,7 @@ test = [
     "pytest",
     "pytest-cov",
     "pytest-qt",
-    "pytest-asyncio<1.0.0",  # Breaks our tests somehow
+    "pytest-asyncio",
     "pytest-mock",
     "pytest-localftpserver",
     "pytest-xdist[psutil]",
@@ -177,7 +180,7 @@ installer = [
 ]
 
 typing = [
-    "mypy<1.20.1",
+    "mypy<1.20.2",
     "types-aiofiles",
     "types-peewee<4",
     "types-qrcode>=8.0.0.20241004",

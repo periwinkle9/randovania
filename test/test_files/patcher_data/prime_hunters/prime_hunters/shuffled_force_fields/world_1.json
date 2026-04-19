@@ -404,7 +404,7 @@
                         }
                     ]
                 },
-                "Stronghold Void A (C": {
+                "Stronghold Void A": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -415,7 +415,7 @@
                         }
                     ]
                 },
-                "Stronghold Void B (C": {
+                "Stronghold Void B": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -509,12 +509,12 @@
                     "force_fields": [],
                     "portals": [
                         {
-                            "entity_id": 28,
+                            "entity_id": 29,
                             "target_index": 11,
                             "entity_filename": "unit1_RM1_Ent"
                         },
                         {
-                            "entity_id": 29,
+                            "entity_id": 28,
                             "target_index": 10,
                             "entity_filename": "unit1_RM1_Ent"
                         }
@@ -596,12 +596,12 @@
                     "portals": [
                         {
                             "entity_id": 57,
-                            "target_index": 11,
+                            "target_index": 10,
                             "entity_filename": "unit1_C4_Ent"
                         },
                         {
                             "entity_id": 58,
-                            "target_index": 10,
+                            "target_index": 11,
                             "entity_filename": "unit1_C4_Ent"
                         }
                     ]
@@ -708,7 +708,7 @@
                         }
                     ]
                 },
-                "Stronghold Void B (A": {
+                "Stronghold Void B": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -719,7 +719,7 @@
                         }
                     ]
                 },
-                "Stronghold Void A (A": {
+                "Stronghold Void A": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -943,7 +943,7 @@
                         }
                     ]
                 },
-                "Stronghold Void A (A": {
+                "Stronghold Void A": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -954,7 +954,7 @@
                         }
                     ]
                 },
-                "Stronghold Void B (A": {
+                "Stronghold Void B": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -1151,7 +1151,7 @@
                         }
                     ]
                 },
-                "Stronghold Void A (V": {
+                "Stronghold Void A": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -1162,7 +1162,7 @@
                         }
                     ]
                 },
-                "Stronghold Void B (V": {
+                "Stronghold Void B": {
                     "pickups": [],
                     "force_fields": [],
                     "portals": [
@@ -1228,6 +1228,14 @@
             }
         }
     },
+    "ammo_sizes": {
+        "missile_launcher": 5,
+        "missile_expansion": 10,
+        "ua_expansion": 30
+    },
+    "game_patches": {
+        "shuffle_hunter_colors": false
+    },
     "string_tables": {
         "scan_log": {
             "904L": "OCTOLITH HINTS 01\\OCTOLITH 1 is located in ARCTERRA. OCTOLITH 2 is located in CELESTIAL ARCHIVES.",
@@ -1236,8 +1244,11 @@
             "214L": "OCTOLITH HINTS 04\\OCTOLITH 7 is located in ALINOS. OCTOLITH 8 is located in ARCTERRA."
         }
     },
+    "text_patches": {
+        "patcher_version": "<version>"
+    },
     "_randovania_meta": {
-        "layout_was_user_modified": true,
+        "layout_was_user_modified": false,
         "in_race_setting": false
     }
 }
