@@ -129,7 +129,9 @@ def _check_if_action_was_safe(
     return False
 
 
-def _recalculate_reach_after_action(previous_reach: GeneratorReach, action: WorldGraphNode, graph) -> GeneratorReach:
+def _recalculate_reach_after_action(
+    previous_reach: GeneratorReach, action: WorldGraphNode, graph: WorldGraph
+) -> GeneratorReach:
     next_reach = copy.deepcopy(previous_reach)
     next_reach.act_on(action)
     collect_all_safe_resources_in_reach(next_reach)
