@@ -125,15 +125,20 @@ def _check_if_action_was_safe(
             # to where we started and the set of safe nodes didn't shrink
             # We'll now create an entire new GeneratorReach and check if the safe nodes really didn't shrink.
 
-            # No need to call collect_all_safe_resources_in_reach on this new reach,
-            # as we've already collected everything at the start of this loop
-            experimental_reach = _get_reach_class().reach_from_state(
-                graph, new_reach.state.copy(), previous_reach.filler_config
-            )
-
-            if previous_safe_node_sets[0] <= experimental_reach.safe_nodes_index_set:
-                return True
+            return True
     return False
+
+
+def _recalculate_reach_after_action(previous_reach: GeneratorReach, action: WorldGraphNode, graph) -> GeneratorReach:
+    next_reach = copy.deepcopy(previous_reach)
+    next_reach.act_on(action)
+    collect_all_safe_resources_in_reach(next_reach)
+
+    experimental_reach = _get_reach_class().reach_from_state(
+        graph, next_reach.state.copy(), previous_reach.filler_config
+    )
+
+    return experimental_reach
 
 
 def advance_after_action(previous_reach: GeneratorReach) -> GeneratorReach:
@@ -151,9 +156,7 @@ def advance_after_action(previous_reach: GeneratorReach) -> GeneratorReach:
 
     for action in get_collectable_resource_nodes_of_reach(previous_reach):
         # print("Trying to collect {} and it's not dangerous. Copying...".format(action.full_name()))
-        next_reach = copy.deepcopy(previous_reach)
-        next_reach.act_on(action)
-        collect_all_safe_resources_in_reach(next_reach)
+        next_reach = _recalculate_reach_after_action(previous_reach, action, graph)
         middle_safe_nodes = next_reach.safe_nodes_index_set
         middle_reachable_nodes = next_reach.set_of_reachable_node_indices()
 
@@ -173,9 +176,7 @@ def advance_after_action(previous_reach: GeneratorReach) -> GeneratorReach:
             # This loop is largely the same logic as above, and exists for the purpose of trying a second possibly
             # unsafe action to get an even deeper evaluation of new safe resources.
 
-            next_next_reach = copy.deepcopy(next_reach)
-            next_next_reach.act_on(next_action)
-            collect_all_safe_resources_in_reach(next_next_reach)
+            next_next_reach = _recalculate_reach_after_action(next_reach, next_action, graph)
 
             last_reachable_nodes = next_next_reach.set_of_reachable_node_indices()
 
