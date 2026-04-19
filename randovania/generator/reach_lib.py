@@ -107,7 +107,6 @@ def _is_new_node_state_no_worse(
 def _check_if_action_was_safe(
     graph: WorldGraph,
     initial_state: State,
-    previous_reach: GeneratorReach,
     action: WorldGraphNode,
     new_reach: GeneratorReach,
     new_reachable_nodes: set[int],
@@ -165,7 +164,6 @@ def advance_after_action(previous_reach: GeneratorReach) -> GeneratorReach:
         if _check_if_action_was_safe(
             graph,
             initial_state,
-            previous_reach,
             action,
             next_reach,
             middle_reachable_nodes,
@@ -185,7 +183,6 @@ def advance_after_action(previous_reach: GeneratorReach) -> GeneratorReach:
             if _check_if_action_was_safe(
                 graph,
                 initial_state,
-                previous_reach,
                 next_action,
                 next_next_reach,
                 last_reachable_nodes,
