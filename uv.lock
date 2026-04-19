@@ -2770,13 +2770,13 @@ pil = [
 
 [[package]]
 name = "random-enemy-attributes"
-version = "1.0.4.3"
+version = "1.0.9"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/67/b0/5d38af20af854773ef300184fc12238400900943cd9b158951ad5ac09241/Random_Enemy_Attributes-1.0.4.3.tar.gz", hash = "sha256:cab47d4b474042f5d8b0e355659605f50167c09f7f978a269ed8fb757915f371", size = 93201, upload-time = "2024-05-03T18:04:54.72Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d9/89/7c6a9a8fc0be104a78675e1297df467887e95915813e1ee67c66f67d55d7/random_enemy_attributes-1.0.9.tar.gz", hash = "sha256:cddddf2799a90a13deb95fea6f68970842f84abf0a87ef1f3d1c14794e74751d", size = 104614, upload-time = "2026-04-19T02:02:07.104Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/08/cd/13ca3a80c75be62f1a2c02f97d3b636be72bcaae8fd17e23e893f3423d50/Random_Enemy_Attributes-1.0.4.3-cp312-cp312-macosx_10_9_universal2.whl", hash = "sha256:2f7e934b318f6faae884a71a47c6a928060fe1605683f886ebcaa483242209dc", size = 183485, upload-time = "2024-05-03T18:04:39.351Z" },
-    { url = "https://files.pythonhosted.org/packages/e5/00/9b0544d7868f04534346d459a60d92ede2e8a4e8945d7a862c7daab7cb24/Random_Enemy_Attributes-1.0.4.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:3819f40febb21f7b55c2a1d9d0c5161bf175e6bf9ed42b5fc227c694850d9fce", size = 710558, upload-time = "2024-05-03T18:04:41.523Z" },
-    { url = "https://files.pythonhosted.org/packages/e0/ec/95f44dd728c2c0187d7a820eed8c6aa83c07663bcc2b6528af60b93d0c65/Random_Enemy_Attributes-1.0.4.3-cp312-cp312-win_amd64.whl", hash = "sha256:0f6ced679b761ab9d03c539492caecb5d9d11b3a7171c13cd8ea8a0ac8619c31", size = 77152, upload-time = "2024-05-03T18:04:42.745Z" },
+    { url = "https://files.pythonhosted.org/packages/b2/d6/acbfd21a260ab394e65bf0f3fa91afd5cbb78bff3b847bc67833cd08886a/random_enemy_attributes-1.0.9-cp310-abi3-macosx_10_9_universal2.whl", hash = "sha256:984f379526ba8572b57c03fef30716e93f7dce347e8947a7f3a06e98eafb7063", size = 185187, upload-time = "2026-04-19T02:02:02.769Z" },
+    { url = "https://files.pythonhosted.org/packages/07/7a/203fd0d58bc8a859f153212a3d635cb7d2dc09612161eeedfdb1ef289921/random_enemy_attributes-1.0.9-cp310-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:43ff740abd6b2a01d4c9f2211a0005f48032a8c693a547d2a21c57a0937239a9", size = 698347, upload-time = "2026-04-19T02:02:04.365Z" },
+    { url = "https://files.pythonhosted.org/packages/3d/4f/fba4218c9a141def2f16d29685ff4dbeebe3839cc2635c6d9155764b227b/random_enemy_attributes-1.0.9-cp310-abi3-win_amd64.whl", hash = "sha256:d4f62a05d7b7ea1d1a37ec274d338daf25e0a7b0973c44985d931a2300095aa1", size = 75697, upload-time = "2026-04-19T02:02:05.718Z" },
 ]
 
 [[package]]
@@ -2956,7 +2956,7 @@ requires-dist = [
     { name = "python-socketio", extras = ["asyncio-client"] },
     { name = "qasync", marker = "extra == 'gui'" },
     { name = "qrcode", extras = ["pil"], marker = "extra == 'gui'", specifier = ">=8.0" },
-    { name = "random-enemy-attributes", marker = "extra == 'exporters'", specifier = "==1.0.4.3" },
+    { name = "random-enemy-attributes", marker = "extra == 'exporters'", specifier = "==1.0.9" },
     { name = "retro-data-structures", marker = "extra == 'exporters'", specifier = ">=0.34" },
     { name = "ruamel-yaml", marker = "extra == 'website'" },
     { name = "rustworkx", specifier = ">=0.17.1" },
