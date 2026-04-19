@@ -95,6 +95,14 @@ def _is_new_node_state_no_worse(
     new_reachable_nodes: set[int],
     old_reachable_node_sets: list[set[int]],
 ) -> bool:
+    """Utility function to check the state after one or more actions, to see if the new state isn't missing any nodes as
+     either safe or reachable that was safe or reachable, respectively, at an earlier stage of the evaluation.
+    :param new_reach:
+    :param old_safe_node_sets:
+    :param new_reachable_nodes:
+    :param old_reachable_node_sets:
+    :return:
+    """
     for old_safe_nodes in old_safe_node_sets:
         if not old_safe_nodes <= new_reach.safe_nodes_index_set:
             return False
@@ -113,6 +121,22 @@ def _check_if_action_was_safe(
     previous_safe_node_sets: list[set[int]],
     old_reachable_node_sets: list[set[int]],
 ) -> bool:
+    """
+    Utility function to check if an action is safe or not. The new action is either the first or the second possibly
+     unsafe action taken from the initial state. The action is considered safe if all the nodes that were reachable in
+      the initial state are still reachable in the new state. Similarly, nodes that were safe in the initial state, are
+       also safe after the action. If we are evaluating the second action, then additionally, any nodes that were
+        reachable or safe after the first action, still has to be reachable or safe, respectively, after this second
+         action.
+    :param graph:
+    :param initial_state:
+    :param action:
+    :param new_reach:
+    :param new_reachable_nodes:
+    :param previous_safe_node_sets:
+    :param old_reachable_node_sets:
+    :return:
+    """
     if _is_new_node_state_no_worse(new_reach, previous_safe_node_sets, new_reachable_nodes, old_reachable_node_sets):
         if _action_has_no_dangerous_resources(action, graph.dangerous_resources, initial_state.resources):
             return True
@@ -131,6 +155,15 @@ def _check_if_action_was_safe(
 def _recalculate_reach_after_action(
     previous_reach: GeneratorReach, action: WorldGraphNode, graph: WorldGraph
 ) -> GeneratorReach:
+    """
+    Create a new GeneratorReach that after collecting the given possibly unsafe action. Afterward, collect all safe
+     resources. Finally, the returned reach is rebuild from state, using the graph, which is necessary for some edge
+      cases related to dangerous actions.
+    :param previous_reach:
+    :param action:
+    :param graph:
+    :return:
+    """
     next_reach = copy.deepcopy(previous_reach)
     next_reach.act_on(action)
     collect_all_safe_resources_in_reach(next_reach)
