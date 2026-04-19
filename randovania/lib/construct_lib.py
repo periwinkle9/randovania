@@ -157,7 +157,7 @@ class CompressedZSTD(construct.Tunnel):
     def __init__(self, subcon: construct.Construct, level: int = 3):
         super().__init__(subcon)
         try:
-            import compression.zstd as zstd_lib
+            import compression.zstd as zstd_lib  # type: ignore[import-not-found]
         except ImportError:
             import zstandard as zstd_lib
 
