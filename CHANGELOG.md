@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Metroid Dread
 
 - Changed: Increased likelihood that doors that are logically challenging to reach get locks when using Individual Doors mode to randomize Door Locks.
+- Changed: Increased likelihood of the generator placing Energy Tanks or Energy Parts sooner.
 
 ### Metroid Fusion
 
